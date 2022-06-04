@@ -12,6 +12,7 @@
   top: 0;
   box-shadow: 0 0 8px rgb(0 0 0 / 10%);
   height: 67px;
+  z-index: 4;
 }
 
 .logoSVG {
