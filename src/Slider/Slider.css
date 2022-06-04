@@ -3,16 +3,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  box-shadow: 0 0 8px rgb(0 0 0 / 10%);
 }
 .imgSlider {
   width: 900px;
   height: 500px;
   object-fit: cover;
-  display: none;
-}
-
-.visible {
-  display: inline;
+  opacity: 0;
+  transition: all 1000ms;
+  animation: opa .6s;
+  animation-fill-mode: forwards
 }
 
 .arrowBtn {
@@ -23,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: transparent;
+  border: 1px solid gray;
   background-color: transparent;
   transition: all 150ms;
   position: absolute;
@@ -31,11 +32,11 @@
 }
 
 .arrowBtnLeft {
-  left: 5%;
+  left: 10%;
 }
 
 .arrowBtnRigth {
-  right: 5%;
+  right: 10%;
 }
 
 .arrowBtn:hover {
@@ -60,10 +61,19 @@
   border-radius: 6px;
   border: 0;
   width: 8px;
-  background-color: rgba(249, 252, 255, 0.623);
+  background-color: rgba(90, 90, 90, 0.452);
   transition: all 200ms;
 }
 
 .quadrateView {
   width: 30px;
+}
+
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
