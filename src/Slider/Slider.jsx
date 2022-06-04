@@ -3,7 +3,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable arrow-body-style */
 import './Slider.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -47,9 +47,12 @@ function Slider() {
     setViewImg(Number(num));
   };
 
-  setInterval(() => {
-    next();
-  }, 6000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      next();
+    }, 6000);
+    return () => clearInterval(intervalId);
+  }, [viewImg]);
 
   return (
     <div className="Slider">
