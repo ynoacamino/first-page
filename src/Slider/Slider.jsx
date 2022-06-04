@@ -47,6 +47,10 @@ function Slider() {
     setViewImg(Number(num));
   };
 
+  setInterval(() => {
+    next();
+  }, 6000);
+
   return (
     <div className="Slider">
       {imgs.map((img) => {
