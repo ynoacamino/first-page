@@ -3,6 +3,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faSlack } from '@fortawesome/free-brands-svg-icons';
+import BtnBurger from '../BtnBurger/BtnBurger';
 
 function Header() {
   return (
@@ -30,6 +31,7 @@ function Header() {
         <button type="button" className="btnSearchNav pointer">
           <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
         </button>
+        <BtnBurger />
       </ul>
     </div>
   );
