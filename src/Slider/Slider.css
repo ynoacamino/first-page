@@ -7,7 +7,7 @@
   box-shadow: 0 0 8px rgb(0 0 0 / 10%);
 }
 .imgSlider {
-  width: 900px;
+  width: min(900px, 90vw);
   height: 500px;
   object-fit: cover;
   opacity: 0;
