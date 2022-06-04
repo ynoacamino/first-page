@@ -45,3 +45,11 @@ body {
 .underline:hover{
   cursor: pointer;
 }
+
+.clearBtn {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
