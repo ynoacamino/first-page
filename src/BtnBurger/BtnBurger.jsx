@@ -1,20 +1,13 @@
 import './BtnBurger.css';
-import React, { useState } from 'react';
+import React from 'react';
 
-function BtnBurger() {
-  const [open, setOpen] = useState(false);
-
-  const clickOpen = () => {
-    setOpen(!open);
-  };
-
+function BtnBurger({ open }) {
   return (
-    <div className={`icon nav-icon-5 ${open && 'open'}`} onClick={clickOpen} onKeyDown={clickOpen} role="button" aria-hidden>
+    <div className={`icon nav-icon-5 ${open && 'open'}`}>
       <span />
       <span />
       <span />
     </div>
   );
 }
-
 export default BtnBurger;
