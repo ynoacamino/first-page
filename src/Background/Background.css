@@ -1,0 +1,32 @@
+.Background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxImgBg {
+  position: relative;
+}
+
+.boxImg {
+  width: min(1000px, 55vw);
+  height: 60vh;
+  object-fit: cover;
+}
+
+.degraded {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 125, 0, 0), #f5f5f5);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.textBg {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  padding: 60px;
+  font-size: 1.7rem;
+  color: rgb(80, 80, 80);
+}

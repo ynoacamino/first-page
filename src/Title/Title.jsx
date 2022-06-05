@@ -11,7 +11,8 @@ function Title() {
         .split('')
         .map((lether, index) => (
           <motion.div
-            animate={{ y: -300 }}
+            animate={{ y: 50 }}
+            initial={{ y: 350 }}
             transition={{ delay: index / 3 + 0.5 }}
             className="boxLether"
           >
