@@ -2,19 +2,27 @@
   margin: 20px;
   margin-top: -30px;
   font-family: 'Kanit', sans-serif;
-  font-size: 7rem;
+  font-size: 6.5rem;
 }
 
 .boxLether {
   font-weight: bold;
-  margin-top: -80px;
+  margin-top: -75px;
   text-align: center;
 }
 
-.Title {
-  font-size: 5rem;
+@media (max-width: 1200px){
+  .Title {
+    font-size: 5rem;
+  }
+  
+  .boxLether {
+    margin-top: -58px;
+  }
 }
 
-.boxLether {
-  margin-top: -58px;
+@media (max-width: 1000px){
+  .Title {
+    display: flex;
+  }
 }

@@ -11,7 +11,7 @@
   height: 500px;
   object-fit: cover;
   opacity: 0;
-  transition: all 1000ms;
+
   animation: opa .6s;
   animation-fill-mode: forwards
 }
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid gray;
+  border: 2px solid rgb(54, 54, 54);
   background-color: transparent;
   transition: all 150ms;
   position: absolute;
@@ -62,7 +62,6 @@
   border: 0;
   width: 8px;
   background-color: rgba(90, 90, 90, 0.452);
-  transition: all 200ms;
 }
 
 .quadrateView {
@@ -75,5 +74,33 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 950px){
+  .imgSlider {
+    width: min(900px, 90vw);
+    height: 300px;
+    object-fit: cover;
+  }
+  .arrowBtnLeft {
+    left: 5%;
+  }
+  
+  .arrowBtnRigth {
+    right: 5%;
+  }
+}
+
+@media (max-width: 600px){
+  .imgSlider {
+    height: 250px;
+  }
+  .arrowBtnLeft {
+    left: 3%;
+  }
+  
+  .arrowBtnRigth {
+    right: 3%;
   }
 }

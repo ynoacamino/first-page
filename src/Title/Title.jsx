@@ -2,7 +2,7 @@ import './Title.css';
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const word = 'ESTORE';
+const word = 'ESHOP';
 
 function Title() {
   return (
@@ -11,9 +11,10 @@ function Title() {
         .split('')
         .map((lether, index) => (
           <motion.div
-            animate={{ y: 50 }}
-            initial={{ y: 350 }}
+            animate={{ y: 50, opacity: 1 }}
+            initial={{ y: 350, opacity: 0 }}
             transition={{ delay: index / 3 + 0.5 }}
+            key={lether}
             className="boxLether"
           >
             {lether}

@@ -14,7 +14,10 @@ function Background() {
         <div className="degraded" />
       </div>
       <div className="textBg">
-        La PC gamer de tu sueños a un click, consulta con nosotros.
+        La PC gamer de tu sueños a un
+        {' '}
+        <a className="clickLink underline" href="/">click</a>
+        , consulta con nosotros.
       </div>
       <Title />
     </div>

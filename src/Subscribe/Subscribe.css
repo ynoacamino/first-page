@@ -1,0 +1,76 @@
+.degradedText {
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+  font-size: 3rem;
+}
+
+.Subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formSub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.degradedSub {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(255, 125, 0, 0), #f5f5f5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.boxImgSub {
+  position: relative;
+  width: 45%;
+}
+
+.boxSubImg {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.inputSub {
+  border: 3px rgb(85, 85, 85);
+  padding: 15px 20px;
+  border-radius: 40px;
+  font-size: 1.5rem;
+  box-shadow: 0 0 8px rgb(0 0 0 / 25%);
+}
+
+.inputBtnSub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btnSub {
+  color: rgb(97, 97, 97);
+  border-radius: 50%;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  box-shadow: 0 0 8px rgb(0 0 0 / 50%);
+  background-color: transparent;
+  transition: all 150ms;
+}
+
+.btnSub:hover {
+  background-color: rgb(54, 54, 54);
+  color: white;
+}
