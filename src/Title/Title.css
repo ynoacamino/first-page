@@ -1,0 +1,15 @@
+.Title {
+  margin: 400px 400px 40px 400px;
+  font-family: 'Kanit', sans-serif;
+  font-size: 7rem;
+}
+
+.boxLether {
+  font-weight: bold;
+  margin-top: -80px;
+  text-align: center;
+}
+
+@keyframes move {
+  
+}
