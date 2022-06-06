@@ -43,7 +43,7 @@
 
 .inputSub {
   border: 3px rgb(85, 85, 85);
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-radius: 40px;
   font-size: 1.5rem;
   box-shadow: 0 0 8px rgb(0 0 0 / 25%);
@@ -52,6 +52,7 @@
 .inputBtnSub {
   display: flex;
   justify-content: center;
+
   align-items: center;
   gap: 20px;
 }
@@ -92,6 +93,10 @@
     width: 100%;
     height: 100%;
   }
+  .degradedText {
+    color: rgba(255, 255, 255, 0.795);
+    font-size: 2.4rem;
+  }
   .degradedSub {
     display: none;
   }
@@ -100,15 +105,31 @@
     top:0;
     left: 0;
     z-index: 4;
-    padding: 25px 35px;
-    background-color: rgba(255, 255, 255, 0.4);
-    top: calc(50% - 100px);
-    left: calc(50% - 300px);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
     color: rgb(30, 30, 30);
   }
 
   .inputSub {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.692);
     
+  }
+  .btnSub {
+    color: rgba(68, 68, 68, 0.801);
+    background-color: rgba(255, 255, 255, 0.692);
+  }
+  .btnSub:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@media (max-width: 670px) {
+  .degradedText {
+    color: rgba(255, 255, 255, 0.733);
+    font-size: 1.8rem;
+  }
+  .inputSub {
+    font-size: 1.2rem;
   }
 }
