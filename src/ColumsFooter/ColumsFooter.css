@@ -28,10 +28,29 @@
 }
 
 .colFooter {
+  transition: all 300ms;
   width: 260px;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  min-width: 210px;
+}
+
+@media (max-width: 1350px) {
+  .colFooter {
+    overflow: hidden;
+    height: 25px;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    padding-bottom: 5px;
+ 
+  }
+  .viewFooter {
+    height: 320px;
+  }
+  .titleFooter:hover {
+    cursor: pointer;
+  }
+
 }

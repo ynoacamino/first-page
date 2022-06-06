@@ -1,5 +1,5 @@
 import './Footer.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import ColumsFooter from '../ColumsFooter/ColumsFooter';
@@ -16,6 +16,7 @@ const textApi = [
       { name: 'Accesorios', url: '/' },
       { name: 'Wi-Fi 5G', url: '/' },
     ],
+    key: '1',
   },
   {
     title: 'SOPORTE',
@@ -25,6 +26,7 @@ const textApi = [
       { name: 'Libro de Reclamaciones', url: '/' },
       { name: 'Servicio de Soporte Técnico', url: '/' },
     ],
+    key: '2',
   },
   {
     title: 'CONTACTENOS',
@@ -33,6 +35,7 @@ const textApi = [
       { name: 'Chat en vivo', url: '/' },
       { name: 'Dudas y sugerencias', url: '/' },
     ],
+    key: '3',
   },
   {
     title: 'CONOCENOS',
@@ -43,6 +46,7 @@ const textApi = [
       { name: 'Únete a nosotros', url: '/' },
       { name: 'Contáctanos', url: '/' },
     ],
+    key: '4',
   },
 ];
 
@@ -56,16 +60,25 @@ const redes = {
 };
 
 function Footer() {
+  const [windowFooter, setWindowFooter] = useState(0);
+
+  const changeWindow = (num) => {
+    setWindowFooter(num);
+  };
+
   return (
     <div className="Footer">
       {textApi.map((column) => (
         <ColumsFooter
-          key={column.title}
+          key={column.key}
           title={column.title}
           content={column.content}
+          changeWindow={(x) => changeWindow(x)}
+          windowFooter={windowFooter}
+          llave={column.key}
         />
       ))}
-      <div className="colFooter">
+      <div className="colSiguenos">
         <span className="titleFooter">{redes.title}</span>
         <ul className="boxIcoRedes">
           <li className="liFooter">

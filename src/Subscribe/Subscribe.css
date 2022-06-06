@@ -94,7 +94,7 @@
     height: 100%;
   }
   .degradedText {
-    color: rgba(255, 255, 255, 0.795);
+    color: rgba(255, 255, 255, 0.822);
     font-size: 2.4rem;
   }
   .degradedSub {
@@ -107,7 +107,7 @@
     z-index: 4;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
     color: rgb(30, 30, 30);
   }
 
@@ -132,4 +132,8 @@
   .inputSub {
     font-size: 1.2rem;
   }
+  .formSub {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
 }

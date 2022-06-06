@@ -9,7 +9,7 @@ function Subscribe() {
       <form className="formSub">
         <span className="degradedText">¡REGÍSTRATE Y RECIBE OFERTAS EXCLUSIVAS!</span>
         <div className="inputBtnSub">
-          <input className="inputSub" type="email" name="email" id="email" />
+          <input className="inputSub" type="email" name="email" id="email" placeholder="example@gmail.com" />
           <button type="submit" className="btnSub pointer">
             <FontAwesomeIcon icon={faArrowRight} size="2x" />
           </button>

@@ -5,7 +5,7 @@ import Header from './Header/Header';
 import Slider from './Slider/Slider';
 import Background from './Background/Background';
 import Subscribe from './Subscribe/Subscribe';
-// import Footer from './Footer/Footer';
+import Footer from './Footer/Footer';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Background />
       <Slider />
       <Subscribe />
+      <Footer />
     </div>
   );
 }
