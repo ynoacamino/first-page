@@ -25,7 +25,7 @@
   align-items: center ;
   padding: 40px 20px;
   border-radius: 30px;
-  height: 520px;
+  height: 550px;
 }
 
 .nameProductLeft {
@@ -35,6 +35,7 @@
 
 .imgProductLeft {
   width: 400px;
+  margin-bottom: 30px;
 }
 
 .descriptionProductLeft {
@@ -69,4 +70,8 @@
 .btnProduct:hover {
   background-color: rgb(43, 43, 43);
   color: white;
+}
+
+.isMobileProductLeft {
+  height: 600px;
 }

@@ -1,6 +1,7 @@
 import './PrimaryProducts.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
+import { BrowserView, MobileView, isMobile } from 'react-device-detect';
 
 const products = {
   left: {
@@ -28,64 +29,108 @@ const products = {
 function PrimaryProducts() {
   const btnAnimationHidden = useAnimation();
   const btnAnimationShow = useAnimation();
+  const imgAnimationHover = useAnimation();
 
   const startAnimation = () => {
-    console.log('start hover');
     btnAnimationHidden.start('hidden');
     btnAnimationShow.start('show');
+    imgAnimationHover.start('hoverStart');
   };
 
   const endAnimation = () => {
     btnAnimationHidden.start('hiddenEnd');
     btnAnimationShow.start('showEnd');
+    imgAnimationHover.start('hoverEnd');
   };
 
   const variantes = {
     hidden: {
       y: -70,
       opacity: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+      },
     },
     hiddenEnd: {
       y: 0,
       opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+      },
     },
     show: {
       y: -70,
       opacity: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+      },
     },
     showEnd: {
       y: 0,
       opacity: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+      },
+    },
+    hoverStart: {
+      scale: 1.1,
+    },
+    hoverEnd: {
+      scale: 1,
     },
   };
 
   return (
     <div className="PrimaryProducts">
-      <a href="/" className="ProductLeft boxProduct">
-        <img className="imgProductLeft hoverProduct" src={products.left.src} alt={products.left.name} />
-        <span className="nameProductLeft">{products.left.name}</span>
-        <motion.div
+      <a href="/" className={`ProductLeft boxProduct ${isMobile && 'isMobileProductLeft'}`}>
+        <motion.img
           onHoverStart={() => startAnimation()}
-          className="aniamtionBtn"
           onHoverEnd={() => endAnimation()}
-        >
-          <motion.span
-            className="descriptionProductLeft"
-            animate={btnAnimationHidden}
-            variants={variantes}
+          className="imgProductLeft hoverProduct"
+          src={products.left.src}
+          alt={products.left.name}
+          animate={imgAnimationHover}
+          variants={variantes}
+        />
+        <span className="nameProductLeft">{products.left.name}</span>
+        <BrowserView>
+          <motion.div
+            className="aniamtionBtn"
+            onHoverStart={() => startAnimation()}
+            onHoverEnd={() => endAnimation()}
           >
-            {products.left.description}
-          </motion.span>
-          <motion.button
-            type="button"
-            className="pointer btnProduct"
-            initial={{ opacity: 0 }}
-            animate={btnAnimationShow}
-            variants={variantes}
-          >
-            Comprar
-          </motion.button>
-        </motion.div>
+            <motion.span
+              className="descriptionProductLeft"
+              animate={btnAnimationHidden}
+              variants={variantes}
+            >
+              {products.left.description}
+            </motion.span>
+            <motion.button
+              type="button"
+              className="pointer btnProduct"
+              initial={{ opacity: 0 }}
+              animate={btnAnimationShow}
+              variants={variantes}
+            >
+              Comprar
+            </motion.button>
+          </motion.div>
+        </BrowserView>
+        <MobileView>
+          <div className="aniamtionBtn">
+            <span className="descriptionProductLeft">
+              {products.left.description}
+            </span>
+            <button className="pointer btnProduct" type="button">
+              Comprar
+            </button>
+          </div>
+        </MobileView>
       </a>
     </div>
   );
