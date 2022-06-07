@@ -76,14 +76,15 @@ function Slider() {
         if (viewImg === Number(img.key)) {
           return (
             <div className="divImg" key={img.key}>
-              <img
-                className="imgSlider "
-                srcSet={`${img.srcMovil} 1000w, ${img.src} 1600w`}
-                sizes="(max-width: 1000px) 1000px, 1600px"
-                src={img.src}
-                alt={img.alt}
-                decoding="sync"
-              />
+              <picture>
+                <source media="(max-width: 1000px)" srcSet={img.srcMovil} />
+                <img
+                  className="imgSlider "
+                  src={img.src}
+                  alt={img.alt}
+                  decoding="sync"
+                />
+              </picture>
             </div>
           );
         }

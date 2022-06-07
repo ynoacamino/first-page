@@ -1,7 +1,9 @@
 import './PrimaryProducts.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { BrowserView, MobileView, isMobile } from 'react-device-detect';
+import {
+  isMobile, isAndroid,
+} from 'react-device-detect';
 
 const products = {
   left: {
@@ -86,7 +88,7 @@ function PrimaryProducts() {
 
   return (
     <div className="PrimaryProducts">
-      <a href="/" className={`ProductLeft boxProduct ${isMobile && 'isMobileProductLeft'}`}>
+      <a href="/" className={`ProductLeft boxProduct ${(isMobile || isAndroid) && 'isMobileProductLeft'}`}>
         <motion.img
           onHoverStart={() => startAnimation()}
           onHoverEnd={() => endAnimation()}
@@ -97,40 +99,40 @@ function PrimaryProducts() {
           variants={variantes}
         />
         <span className="nameProductLeft">{products.left.name}</span>
-        <BrowserView>
-          <motion.div
-            className="aniamtionBtn"
-            onHoverStart={() => startAnimation()}
-            onHoverEnd={() => endAnimation()}
+        { (isMobile || isAndroid) && (
+        <div className="aniamtionBtn">
+          <span className="descriptionProductLeft">
+            {products.left.description}
+          </span>
+          <button className="pointer btnProduct" type="button">
+            Comprar
+          </button>
+        </div>
+        )}
+        { !isAndroid && (
+        <motion.div
+          className="aniamtionBtn"
+          onHoverStart={() => startAnimation()}
+          onHoverEnd={() => endAnimation()}
+        >
+          <motion.span
+            className="descriptionProductLeft"
+            animate={btnAnimationHidden}
+            variants={variantes}
           >
-            <motion.span
-              className="descriptionProductLeft"
-              animate={btnAnimationHidden}
-              variants={variantes}
-            >
-              {products.left.description}
-            </motion.span>
-            <motion.button
-              type="button"
-              className="pointer btnProduct"
-              initial={{ opacity: 0 }}
-              animate={btnAnimationShow}
-              variants={variantes}
-            >
-              Comprar
-            </motion.button>
-          </motion.div>
-        </BrowserView>
-        <MobileView>
-          <div className="aniamtionBtn">
-            <span className="descriptionProductLeft">
-              {products.left.description}
-            </span>
-            <button className="pointer btnProduct" type="button">
-              Comprar
-            </button>
-          </div>
-        </MobileView>
+            {products.left.description}
+          </motion.span>
+          <motion.button
+            type="button"
+            className="pointer btnProduct"
+            initial={{ opacity: 0 }}
+            animate={btnAnimationShow}
+            variants={variantes}
+          >
+            Comprar
+          </motion.button>
+        </motion.div>
+        )}
       </a>
     </div>
   );
