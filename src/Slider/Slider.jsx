@@ -9,24 +9,40 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const imgs = [
   {
-    src: 'https://cdn.discordapp.com/attachments/772232222220615710/982726877124907068/IZQCQ6Ow.png',
+    src: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MateBook-D14WEB.webp',
+    srcMovil: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MateBook-D14-WAP.webp',
     alt: 'sliderImg',
     key: '1',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/772232222220615710/982726877481426944/tgr8Y6Ug.png',
+    src: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MateView-GTWEB.webp',
+    srcMovil: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MateView-GT-WAP.webp',
     alt: 'sliderImg',
     key: '2',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/772232222220615710/982726877716283402/lMWNRBSw.png',
+    src: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MatePad11WEB.webp',
+    srcMovil: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MatePad-WAP.webp',
     alt: 'sliderImg',
     key: '3',
   },
   {
-    src: 'https://cdn.discordapp.com/attachments/772232222220615710/982726877988921354/Mv--JP8w.png',
+    src: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MateBook-D14WEB.webp',
+    srcMovil: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/MateBook-D14-WAP.webp',
     alt: 'sliderImg',
     key: '4',
+  },
+  {
+    src: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/Main-banner-promo-p50-2.webp',
+    srcMovil: 'https://tinyurl.com/2cyb63bz',
+    alt: 'sliderImg',
+    key: '5',
+  },
+  {
+    src: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/KV_WEB_11zon.webp',
+    srcMovil: 'https://consumer.huawei.com/content/dam/huawei-cbg-site/ecommerce/pe/events/smartoffice22/kvs/KV_WAP_11zon.webp',
+    alt: 'sliderImg',
+    key: '6',
   },
 ];
 
@@ -60,7 +76,14 @@ function Slider() {
         if (viewImg === Number(img.key)) {
           return (
             <div className="divImg" key={img.key}>
-              <img className="imgSlider " src={img.src} alt={img.alt} />
+              <img
+                className="imgSlider "
+                srcSet={`${img.srcMovil} 1000w, ${img.src} 1600w`}
+                sizes="(max-width: 1000px) 1000px, 1600px"
+                src={img.src}
+                alt={img.alt}
+                decoding="sync"
+              />
             </div>
           );
         }

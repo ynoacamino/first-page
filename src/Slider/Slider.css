@@ -7,12 +7,10 @@
   box-shadow: 0 0 8px rgb(0 0 0 / 10%);
 }
 .imgSlider {
-  width: min(900px, 90vw);
-  height: 500px;
+  width: 100%;
   object-fit: cover;
   opacity: 0;
-
-  animation: opa .6s;
+  animation: opa .8s;
   animation-fill-mode: forwards
 }
 
@@ -62,6 +60,7 @@
   border: 0;
   width: 8px;
   background-color: rgba(90, 90, 90, 0.452);
+  transition: all 700ms;
 }
 
 .quadrateView {
@@ -77,10 +76,9 @@
   }
 }
 
-@media (max-width: 950px){
+@media (max-width: 1000px){
   .imgSlider {
-    width: min(900px, 90vw);
-    height: 300px;
+    height: auto;
     object-fit: cover;
   }
   .arrowBtnLeft {
@@ -93,9 +91,6 @@
 }
 
 @media (max-width: 600px){
-  .imgSlider {
-    height: 250px;
-  }
   .arrowBtnLeft {
     left: 3%;
   }

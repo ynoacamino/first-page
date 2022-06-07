@@ -1,0 +1,72 @@
+.PrimaryProducts {
+  background-color: white;
+  padding: 50px;
+}
+.boxProduct {
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: black;
+}
+
+.hoverProduct {
+  transition: transform 150ms;
+}
+
+.hoverProduct:hover {
+  transform: scale(1.1);
+}
+
+.ProductLeft {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  overflow: hidden;
+  justify-content: start;
+  align-items: center ;
+  padding: 40px 20px;
+  border-radius: 30px;
+  height: 520px;
+}
+
+.nameProductLeft {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.imgProductLeft {
+  width: 400px;
+}
+
+.descriptionProductLeft {
+  width: 400px;
+  text-align: center;
+  color: rgb(53, 53, 53);
+  margin: 20px;
+}
+
+.aniamtionBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnProduct {
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+  font-weight: bold;
+  border: 2px solid rgb(43, 43, 43);
+  border-radius: 40px;
+  padding: 10px 20px;
+  width: 150px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms;
+}
+
+.btnProduct:hover {
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
