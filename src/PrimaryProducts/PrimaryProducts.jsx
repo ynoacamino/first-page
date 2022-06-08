@@ -1,9 +1,11 @@
 import './PrimaryProducts.css';
 import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import {
   isMobile, isAndroid,
 } from 'react-device-detect';
+import ProductLeft from './ProductLeft/ProductLeft';
+import ProductRigthTop from './ProductRigthTop/ProductRigthTop';
+import ProductRigthBottom from './ProductRigthBottom/ProductRigthBottom';
 
 const products = {
   left: {
@@ -13,7 +15,7 @@ const products = {
   },
   rigth_top: {
     name: 'Redragon Monitor Ruby',
-    src: 'https://redragon.es/content/uploads/2022/03/modal-ruby-desktop.png',
+    src: 'https://cdn.discordapp.com/attachments/772232222220615710/983895809722560592/modal-ruby-desktop_2.png',
     description: 'El Ruby está equipado con un panel VA que proporciona una pérdida mínima de luz y un contraste superior con colores oscuros más fuertes y definidos, lo que te brindará la respuesta que necesitas.',
   },
   rigth_bottom: {
@@ -29,111 +31,25 @@ const products = {
 };
 
 function PrimaryProducts() {
-  const btnAnimationHidden = useAnimation();
-  const btnAnimationShow = useAnimation();
-  const imgAnimationHover = useAnimation();
-
-  const startAnimation = () => {
-    btnAnimationHidden.start('hidden');
-    btnAnimationShow.start('show');
-    imgAnimationHover.start('hoverStart');
-  };
-
-  const endAnimation = () => {
-    btnAnimationHidden.start('hiddenEnd');
-    btnAnimationShow.start('showEnd');
-    imgAnimationHover.start('hoverEnd');
-  };
-
-  const variantes = {
-    hidden: {
-      y: -70,
-      opacity: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-      },
-    },
-    hiddenEnd: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-      },
-    },
-    show: {
-      y: -70,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-      },
-    },
-    showEnd: {
-      y: 0,
-      opacity: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-      },
-    },
-    hoverStart: {
-      scale: 1.1,
-    },
-    hoverEnd: {
-      scale: 1,
-    },
-  };
-
   return (
     <div className="PrimaryProducts">
-      <a href="/" className={`ProductLeft boxProduct ${(isMobile || isAndroid) && 'isMobileProductLeft'}`}>
-        <motion.img
-          onHoverStart={() => startAnimation()}
-          onHoverEnd={() => endAnimation()}
-          className="imgProductLeft hoverProduct"
-          src={products.left.src}
-          alt={products.left.name}
-          animate={imgAnimationHover}
-          variants={variantes}
+      <ProductLeft
+        product={products.left}
+        isAndroid={isAndroid}
+        isMobile={isMobile}
+      />
+      <div className="BoxRigth">
+        <ProductRigthTop
+          isAndroid={isAndroid}
+          isMobile={isMobile}
+          product={products.rigth_top}
         />
-        <span className="nameProductLeft">{products.left.name}</span>
-        { (isMobile || isAndroid) && (
-        <div className="aniamtionBtn">
-          <span className="descriptionProductLeft">
-            {products.left.description}
-          </span>
-          <button className="pointer btnProduct" type="button">
-            Comprar
-          </button>
-        </div>
-        )}
-        { !isAndroid && (
-        <motion.div
-          className="aniamtionBtn"
-          onHoverStart={() => startAnimation()}
-          onHoverEnd={() => endAnimation()}
-        >
-          <motion.span
-            className="descriptionProductLeft"
-            animate={btnAnimationHidden}
-            variants={variantes}
-          >
-            {products.left.description}
-          </motion.span>
-          <motion.button
-            type="button"
-            className="pointer btnProduct"
-            initial={{ opacity: 0 }}
-            animate={btnAnimationShow}
-            variants={variantes}
-          >
-            Comprar
-          </motion.button>
-        </motion.div>
-        )}
-      </a>
+        <ProductRigthBottom
+          isAndroid={isAndroid}
+          isMobile={isMobile}
+          product={products.rigth_top}
+        />
+      </div>
     </div>
   );
 }

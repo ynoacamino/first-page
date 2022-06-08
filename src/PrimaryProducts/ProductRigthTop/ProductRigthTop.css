@@ -1,0 +1,39 @@
+.nameProductRigthTop {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.ProductRigthTop {
+  flex: 1;
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.imgProductRigthTop {
+  height: 270px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.textBoxRigthTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aniamtionBtnRigthTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.descriptionProductRigthTop {
+  text-align: center;
+  padding: 30px;
+}

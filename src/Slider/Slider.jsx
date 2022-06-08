@@ -82,7 +82,7 @@ function Slider() {
                   className="imgSlider "
                   src={img.src}
                   alt={img.alt}
-                  decoding="sync"
+                  decoding="async"
                 />
               </picture>
             </div>
