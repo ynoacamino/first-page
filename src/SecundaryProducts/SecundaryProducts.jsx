@@ -1,4 +1,4 @@
-import './PrimaryProducts.css';
+import './SecundaryProducts.css';
 import React from 'react';
 import {
   isMobile, isAndroid,
@@ -30,7 +30,7 @@ const products = {
   },
 };
 
-function PrimaryProducts() {
+function SecundaryProducts() {
   return (
     <div className="PrimaryProducts">
       <span className="titleProducts">Productos Top</span>
@@ -62,4 +62,4 @@ function PrimaryProducts() {
   );
 }
 
-export default PrimaryProducts;
+export default SecundaryProducts;

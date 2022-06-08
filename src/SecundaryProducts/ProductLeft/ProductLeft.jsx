@@ -1,8 +1,8 @@
-import './ProductRigthTop.css';
+import './ProductLeft.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-function ProductRigthTop({ isMobile, isAndroid, product }) {
+function ProductLeft({ product, isAndroid, isMobile }) {
   const btnAnimationHidden = useAnimation();
   const btnAnimationShow = useAnimation();
   const imgAnimationHover = useAnimation();
@@ -39,7 +39,7 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
       },
     },
     show: {
-      y: -80,
+      y: -70,
       opacity: 1,
       transition: {
         type: 'spring',
@@ -63,47 +63,54 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
       scale: 1,
     },
   };
-
   return (
-    <a href="/" className={`ProductRigthTop boxProduct ${(isMobile || isAndroid) && 'isMobileProductRigthTop'}`}>
-      <motion.div
-        className="textBoxRigthTop"
+    <a href="/" className={`ProductLeft boxProduct ${(isMobile || isAndroid) && 'isMobileProductLeft'}`}>
+      <motion.img
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
-      >
-        <span className="nameProductRigthTop">
-          {product.name}
-        </span>
-        <div className="aniamtionBtnRigthTop">
+        className="imgProductLeft "
+        src={product.src}
+        alt={product.name}
+        animate={imgAnimationHover}
+        variants={variantes}
+      />
+      <span className="nameProductLeft">{product.name}</span>
+      { (isMobile || isAndroid) && (
+        <div className="aniamtionBtnLeft">
+          <span className="descriptionProductLeft">
+            {product.description}
+          </span>
+          <button className="pointer btnProduct" type="button">
+            Comprar
+          </button>
+        </div>
+      )}
+      { !isAndroid && (
+        <motion.div
+          className="aniamtionBtnLeft"
+          onHoverStart={() => startAnimation()}
+          onHoverEnd={() => endAnimation()}
+        >
           <motion.span
-            className="descriptionProductRigthTop"
+            className="descriptionProductLeft"
             animate={btnAnimationHidden}
             variants={variantes}
           >
             {product.description}
           </motion.span>
           <motion.button
-            className="pointer btnProduct"
             type="button"
+            className="pointer btnProduct"
             initial={{ opacity: 0 }}
             animate={btnAnimationShow}
             variants={variantes}
           >
             Comprar
           </motion.button>
-        </div>
-      </motion.div>
-      <motion.img
-        onHoverStart={() => startAnimation()}
-        onHoverEnd={() => endAnimation()}
-        className="imgProductRigthTop"
-        src={product.src}
-        alt={product.name}
-        animate={imgAnimationHover}
-        variants={variantes}
-      />
+        </motion.div>
+      )}
     </a>
   );
 }
 
-export default ProductRigthTop;
+export default ProductLeft;
