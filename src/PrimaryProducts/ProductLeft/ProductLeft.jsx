@@ -68,7 +68,7 @@ function ProductLeft({ product, isAndroid, isMobile }) {
       <motion.img
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
-        className="imgProductLeft hoverProduct"
+        className="imgProductLeft "
         src={product.src}
         alt={product.name}
         animate={imgAnimationHover}
