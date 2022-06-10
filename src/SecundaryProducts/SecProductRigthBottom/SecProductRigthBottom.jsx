@@ -1,4 +1,4 @@
-import './ProductRigthBottom.css';
+import '../SecProductRigth.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -65,38 +65,55 @@ function ProductRigthBottom({ isMobile, isAndroid, product }) {
   };
 
   return (
-    <a href="/" className={`ProductRigthTop boxProduct ${(isMobile || isAndroid) && 'isMobileProductRigthTop'}`}>
+    <a href="/" className="SECProductRigthTop SECboxProduct">
       <motion.div
-        className="textBoxRigthTop"
+        className="SECtextBoxRigthTop"
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
       >
-        <span className="nameProductRigthTop">
+        <span className="SECnameProductRigthTop">
           {product.name}
         </span>
-        <div className="aniamtionBtnRigthTop">
-          <motion.span
-            className="descriptionProductRigthTop"
-            animate={btnAnimationHidden}
-            variants={variantes}
-          >
-            {product.description}
-          </motion.span>
-          <motion.button
-            className="pointer btnProduct"
-            type="button"
-            initial={{ opacity: 0 }}
-            animate={btnAnimationShow}
-            variants={variantes}
-          >
-            Comprar
-          </motion.button>
-        </div>
+        { (isMobile || isAndroid) && (
+          <div className="SECaniamtionBtnRigthTop SECMOBILEaniamtionBtnRigthTop">
+            <span
+              className="SECdescriptionProductRigthTop"
+            >
+              {product.description}
+            </span>
+            <button
+              className="SECpointer SECbtnProduct"
+              type="button"
+            >
+              Comprar
+            </button>
+          </div>
+        )}
+        { !isAndroid && (
+          <div className="SECaniamtionBtnRigthTop">
+            <motion.span
+              className="SECdescriptionProductRigthTop"
+              animate={btnAnimationHidden}
+              variants={variantes}
+            >
+              {product.description}
+            </motion.span>
+            <motion.button
+              className="SECpointer SECbtnProduct"
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={btnAnimationShow}
+              variants={variantes}
+            >
+              Comprar
+            </motion.button>
+          </div>
+        )}
       </motion.div>
       <motion.img
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
-        className="imgProductRigthTop"
+        className="SECimgProductRigthTop"
         src={product.src}
         alt={product.name}
         animate={imgAnimationHover}

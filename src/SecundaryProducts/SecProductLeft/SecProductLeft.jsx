@@ -1,4 +1,4 @@
-import './ProductLeft.css';
+import './SecProductLeft.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -64,35 +64,35 @@ function ProductLeft({ product, isAndroid, isMobile }) {
     },
   };
   return (
-    <a href="/" className={`ProductLeft boxProduct ${(isMobile || isAndroid) && 'isMobileProductLeft'}`}>
+    <a href="/" className={`SECProductLeft SECboxProduct ${(isMobile || isAndroid) && 'SECisMobileProductLeft'}`}>
       <motion.img
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
-        className="imgProductLeft "
+        className="SECimgProductLeft "
         src={product.src}
         alt={product.name}
         animate={imgAnimationHover}
         variants={variantes}
       />
-      <span className="nameProductLeft">{product.name}</span>
+      <span className="SECnameProductLeft">{product.name}</span>
       { (isMobile || isAndroid) && (
-        <div className="aniamtionBtnLeft">
-          <span className="descriptionProductLeft">
+        <div className="SECaniamtionBtnLeft">
+          <span className="SECdescriptionProductLeft">
             {product.description}
           </span>
-          <button className="pointer btnProduct" type="button">
+          <button className="SECbtnProduct pointer" type="button">
             Comprar
           </button>
         </div>
       )}
       { !isAndroid && (
         <motion.div
-          className="aniamtionBtnLeft"
+          className="SECaniamtionBtnLeft"
           onHoverStart={() => startAnimation()}
           onHoverEnd={() => endAnimation()}
         >
           <motion.span
-            className="descriptionProductLeft"
+            className="SECdescriptionProductLeft"
             animate={btnAnimationHidden}
             variants={variantes}
           >
@@ -100,7 +100,7 @@ function ProductLeft({ product, isAndroid, isMobile }) {
           </motion.span>
           <motion.button
             type="button"
-            className="pointer btnProduct"
+            className="SECbtnProduct pointer"
             initial={{ opacity: 0 }}
             animate={btnAnimationShow}
             variants={variantes}

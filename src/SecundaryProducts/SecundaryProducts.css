@@ -1,4 +1,4 @@
-.PrimaryProducts {
+.SECPrimaryProducts {
   background-color: white;
   padding: 100px max(50px, 10%);
   padding-bottom: 50px;
@@ -9,28 +9,28 @@
   align-items: center;
 }
 
-.hoverProduct {
+.SEChoverProduct {
   transition: transform 150ms;
 }
 
-.hoverProduct:hover {
+.SEChoverProduct:hover {
   transform: scale(1.1);
 }
 
-.boxProduct {
+.SECboxProduct {
   background-color: #f4f4f4;
   text-decoration: none;
   color: black;
 }
 
-.BoxRigth {
+.SECBoxRigth {
   display: flex;
   flex-direction: column;
   gap: 40px;
   flex: 3;
 }
 
-.titleProducts{
+.SECtitleProducts{
   font-weight: bold;
   font-size: 3.5rem;
   font-family: 'Poppins', sans-serif;
@@ -39,26 +39,27 @@
   align-items: center;
 }
 
-.viewMoreProducts {
+.SECviewMoreProducts {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   color: rgb(102, 102, 102); 
 }
 
-.linkViewMore {
+.SEClinkViewMore {
   text-decoration: none;
   color: rgb(100, 100, 100); 
   transition: all 200ms;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
-.linkViewMore:hover {
+.SEClinkViewMore:hover {
   color: rgb(0, 0, 0);
 }
 
-.boxProducts {
+.SECboxProducts {
   display: flex;
   gap: 40px;
   position: relative;
+  flex-direction: row-reverse;
 }

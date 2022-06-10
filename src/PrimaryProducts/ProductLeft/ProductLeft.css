@@ -8,6 +8,7 @@
   border-radius: 30px;
   height: 590px;
   flex: 1;
+  min-width: 360px;
 }
 
 .nameProductLeft {

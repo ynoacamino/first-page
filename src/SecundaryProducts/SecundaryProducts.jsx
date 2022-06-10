@@ -3,9 +3,9 @@ import React from 'react';
 import {
   isMobile, isAndroid,
 } from 'react-device-detect';
-import ProductLeft from './ProductLeft/ProductLeft';
-import ProductRigthTop from './ProductRigthTop/ProductRigthTop';
-import ProductRigthBottom from './ProductRigthBottom/ProductRigthBottom';
+import ProductLeft from './SecProductLeft/SecProductLeft';
+import ProductRigthTop from './SecProductRigthTop/SecProductRigthTop';
+import ProductRigthBottom from './SecProductRigthBottom/SecProductRigthBottom';
 
 const products = {
   left: {
@@ -32,15 +32,15 @@ const products = {
 
 function SecundaryProducts() {
   return (
-    <div className="PrimaryProducts">
-      <span className="titleProducts">Productos Top</span>
-      <div className="boxProducts">
+    <div className="SECPrimaryProducts">
+      <span className="SECtitleProducts">Aprovecha el descuento</span>
+      <div className="SECboxProducts">
         <ProductLeft
           product={products.left}
           isAndroid={isAndroid}
           isMobile={isMobile}
         />
-        <div className="BoxRigth">
+        <div className="SECBoxRigth">
           <ProductRigthTop
             isAndroid={isAndroid}
             isMobile={isMobile}
@@ -53,10 +53,10 @@ function SecundaryProducts() {
           />
         </div>
       </div>
-      <span className="viewMoreProducts">
+      <span className="SECviewMoreProducts">
         Descubre más productos
         {' '}
-        <a href="/" className="linkViewMore underline">Aquí</a>
+        <a href="/" className="SEClinkViewMore underline">Aquí</a>
       </span>
     </div>
   );

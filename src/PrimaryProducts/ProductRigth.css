@@ -1,21 +1,22 @@
 .nameProductRigthTop {
   font-weight: bold;
   font-size: 1.6rem;
+  text-align: center;
 }
 
 .ProductRigthTop {
   flex: 1;
   border-radius: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   overflow: hidden;
   padding: 20px;
 }
 
 .imgProductRigthTop {
-  height: 270px;
-  width: 400px;
+  max-height: 270px;
+  width: min(400px, 50%);
   object-fit: cover;
 }
 
@@ -41,4 +42,8 @@
 .descriptionProductRigthTop {
   text-align: center;
   padding: 30px;
+}
+
+.MOBILEaniamtionBtnRigthTop {
+  height: 170px;
 }

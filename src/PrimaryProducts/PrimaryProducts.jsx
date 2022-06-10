@@ -16,7 +16,7 @@ const products = {
   rigth_top: {
     name: 'Redragon Monitor Ruby',
     src: 'https://cdn.discordapp.com/attachments/772232222220615710/983895809722560592/modal-ruby-desktop_2.png',
-    description: 'El Ruby está equipado con un panel VA que proporciona una pérdida mínima de luz y un contraste superior con colores oscuros más fuertes y definidos, lo que te brindará la respuesta que necesitas.',
+    description: 'El Ruby está equipado con un panel VA que proporciona una pérdida mínima de luz y un contraste superior con colores oscuros más fuertes y definidos.',
   },
   rigth_bottom: {
     name: 'Redragon Zeus 2',

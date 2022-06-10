@@ -1,4 +1,4 @@
-.ProductLeft {
+.SECProductLeft {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -10,31 +10,31 @@
   flex: 1;
 }
 
-.nameProductLeft {
+.SECnameProductLeft {
   font-weight: bold;
   font-size: 1.6rem;
 }
 
-.imgProductLeft {
+.SECimgProductLeft {
   width: 400px;
   margin-bottom: 40px;
 }
 
-.descriptionProductLeft {
+.SECdescriptionProductLeft {
   width: min(400px, 90%);
   text-align: center;
   color: rgb(53, 53, 53);
   margin: 20px;
 }
 
-.aniamtionBtnLeft {
+.SECaniamtionBtnLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.btnProduct {
+.SECbtnProduct {
   background-color: transparent;
   color: rgb(43, 43, 43);
   font-weight: bold;
@@ -49,11 +49,11 @@
   transition: all 150ms;
 }
 
-.btnProduct:hover {
+.SECbtnProduct:hover {
   background-color: rgb(43, 43, 43);
   color: white;
 }
 
-.isMobileProductLeft {
+.SECisMobileProductLeft {
   height: 650px;
 }

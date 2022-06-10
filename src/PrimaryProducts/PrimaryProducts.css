@@ -41,7 +41,7 @@
 
 .viewMoreProducts {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   color: rgb(102, 102, 102); 
 }
@@ -50,7 +50,7 @@
   text-decoration: none;
   color: rgb(100, 100, 100); 
   transition: all 200ms;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .linkViewMore:hover {

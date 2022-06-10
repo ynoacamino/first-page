@@ -1,4 +1,4 @@
-import './ProductRigthTop.css';
+import '../ProductRigth.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
@@ -74,24 +74,41 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
         <span className="nameProductRigthTop">
           {product.name}
         </span>
-        <div className="aniamtionBtnRigthTop">
-          <motion.span
-            className="descriptionProductRigthTop"
-            animate={btnAnimationHidden}
-            variants={variantes}
-          >
-            {product.description}
-          </motion.span>
-          <motion.button
-            className="pointer btnProduct"
-            type="button"
-            initial={{ opacity: 0 }}
-            animate={btnAnimationShow}
-            variants={variantes}
-          >
-            Comprar
-          </motion.button>
-        </div>
+        { (isMobile || isAndroid) && (
+          <div className="aniamtionBtnRigthTop MOBILEaniamtionBtnRigthTop">
+            <span
+              className="descriptionProductRigthTop"
+            >
+              {product.description}
+            </span>
+            <button
+              className="pointer btnProduct"
+              type="button"
+            >
+              Comprar
+            </button>
+          </div>
+        )}
+        { !isAndroid && (
+          <div className="aniamtionBtnRigthTop">
+            <motion.span
+              className="descriptionProductRigthTop"
+              animate={btnAnimationHidden}
+              variants={variantes}
+            >
+              {product.description}
+            </motion.span>
+            <motion.button
+              className="pointer btnProduct"
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={btnAnimationShow}
+              variants={variantes}
+            >
+              Comprar
+            </motion.button>
+          </div>
+        )}
       </motion.div>
       <motion.img
         onHoverStart={() => startAnimation()}
