@@ -82,6 +82,10 @@
   color: white;
 }
 
+.test {
+  overflow-x: auto;
+}
+
 @media (max-width: 1300px) {
   .degradedText {
     font-size: 2rem;
