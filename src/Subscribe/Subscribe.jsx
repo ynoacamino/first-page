@@ -23,6 +23,7 @@ function Subscribe() {
         />
         <div className="degradedSub" />
       </div>
+
     </div>
   );
 }
