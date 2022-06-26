@@ -1,3 +1,12 @@
 .App {
 
 }
+.nose {
+  background-color: red;
+  display: flex;
+  font-size: large;
+  text-align: center;
+  color: aqua;
+  bottom: 10px;
+  
+}
