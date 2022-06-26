@@ -98,6 +98,7 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
             >
               {product.description}
             </motion.span>
+
             <motion.button
               className="pointer btnProduct"
               type="button"
