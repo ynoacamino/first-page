@@ -12,6 +12,7 @@
 }
 
 
+
 .nameProductLeft {
   font-weight: bold;
   font-size: 1.6rem;
@@ -21,6 +22,7 @@
   width: 400px;
   margin-bottom: 40px;
 }
+
 
 .descriptionProductLeft {
   width: min(400px, 90%);
@@ -35,6 +37,7 @@
   align-items: center;
   justify-content: center;
 }
+
 
 .btnProduct {
   background-color: transparent;
