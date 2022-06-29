@@ -11,7 +11,7 @@ const products = {
   left: {
     name: 'Redragon Fizz Pro',
     src: 'https://cdn.shopify.com/s/files/1/2695/9506/products/smallkeyboard_1024x1024@2x.png?v=1629454231',
-    description: 'El K617-RGB FIZZ PRO te asegurará una respuesta ultrarrápida de 1 ms en modo inalámbrico de 2,4 GHz, 0 latencia y 0 input lag.',
+    description: 'El K616-RGB FIZZ PRO te asegurará una respuesta ultrarrápida de 1 ms en modo inalámbrico de 2,4 GHz, 0 latencia y 0 input lag.',
   },
   rigth_top: {
     name: 'Redragon Monitor Ruby',
