@@ -12,7 +12,6 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
     btnAnimationShow.start('show');
     imgAnimationHover.start('hoverStart');
   };
-
   const endAnimation = () => {
     btnAnimationHidden.start('hiddenEnd');
     btnAnimationShow.start('showEnd');
