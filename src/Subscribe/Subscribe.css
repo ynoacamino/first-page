@@ -130,6 +130,7 @@
   .btnSub:hover {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
   }
+  
 }
 
 @media (max-width: 670px) {
