@@ -23,7 +23,7 @@ function ColumsFooter({
     >
       <span className="titleFooter">{title}</span>
       <ul className="ulFooter">
-        {content.map((x) => <li key={x.name} className="liFooter"><a href={x.url} className="linkFooter">{x.name}</a></li>)}
+        {content.map((x) => <li key={x.name} className="liFooter "><a href={x.url} className="linkFooter">{x.name}</a></li>)}
       </ul>
     </div>
   );
