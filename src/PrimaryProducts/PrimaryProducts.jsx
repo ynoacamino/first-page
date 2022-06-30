@@ -26,7 +26,7 @@ const products = {
   bottom: {
     name: 'Redragon Esmerald',
     src: 'https://redragon.es/content/uploads/2021/06/EMERALD-1.png',
-    description: 'El Emerald es un monitor gamer de 27" con tecnología IPS, lo que proporciona un ángulo de visión muy amplio, de 178º, y una mejoría sustancial en el color. ',
+    description: 'El Emerald es un monitor gamer de 28" con tecnología IPS, lo que proporciona un ángulo de visión muy amplio, de 178º, y una mejoría sustancial en el color. ',
   },
 };
 
