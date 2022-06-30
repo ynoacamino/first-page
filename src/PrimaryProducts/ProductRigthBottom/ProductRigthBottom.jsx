@@ -113,7 +113,7 @@ function ProductRigthBottom({ isMobile, isAndroid, product }) {
       <motion.img
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
-        className="imgProductRigthTop"
+        className="imgProductRigthTop "
         src={product.src}
         alt={product.name}
         animate={imgAnimationHover}
