@@ -92,7 +92,7 @@ function ProductRigthBottom({ isMobile, isAndroid, product }) {
         { !isAndroid && (
           <div className="SECaniamtionBtnRigthTop">
             <motion.span
-              className="SECdescriptionProductRigthTop "
+              className="SECdescriptionProductRigthTop"
               animate={btnAnimationHidden}
               variants={variantes}
             >
