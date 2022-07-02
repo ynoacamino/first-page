@@ -119,9 +119,11 @@
     gap: 30px;
     overflow: hidden;
   }
+
   .NavMobileView {
     width: min(400px, 100vw);
   }
+  
   .Nav {
     display: none;
   }
