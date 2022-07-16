@@ -13,6 +13,7 @@
   height: max(60vh, 500px);
   object-fit: cover;
 }
+
 .degraded {
   width: 20%;
   height: 100%;
