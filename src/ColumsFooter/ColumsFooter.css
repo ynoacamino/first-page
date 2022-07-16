@@ -37,9 +37,11 @@
   gap: 20px;
   min-width: 210px;
 }
+
 .test {
   display: flex;
 }
+
 @media (max-width: 1350px) {
   .colFooter {
     overflow: hidden;
