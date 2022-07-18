@@ -47,3 +47,47 @@
 .SECMOBILEaniamtionBtnRigthTop {
   height: 170px;
 }
+
+@media (max-width: 1700px) {
+  .SECdescriptionProductRigthTop {
+    font-size: 1rem;
+  }
+  .SECtextBoxRigthTop {
+    height: 100%;
+    width: 50%;
+  }
+  .SECaniamtionBtnRigthTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    justify-content: start;
+    overflow: hidden;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .SECProductRigthTop {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 950px) {
+  .SECProductRigthTop {
+    flex-direction: column-reverse;
+  }
+  .SECtextBoxRigthTop {
+    width: min(100%, 500px );
+  }
+  .SECimgProductRigthTop {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+  }
+  .SECMOBILEaniamtionBtnRigthTop {
+    height: auto;
+  }
+}
