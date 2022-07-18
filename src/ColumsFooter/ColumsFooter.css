@@ -29,13 +29,13 @@
 
 .colFooter {
   transition: all 300ms;
-  width: 260px;
+  width: min(260px, 90%);
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  min-width: 210px;
+
 }
 
 .test {
