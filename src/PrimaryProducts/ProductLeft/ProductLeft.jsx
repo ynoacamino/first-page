@@ -74,9 +74,10 @@ function ProductLeft({ product, isAndroid, isMobile }) {
         animate={imgAnimationHover}
         variants={variantes}
       />
-      <span className="nameProductLeft">{product.name}</span>
+
       { (isMobile || isAndroid) && (
         <div className="aniamtionBtnLeft">
+          <span className="nameProductLeft">{product.name}</span>
           <span className="descriptionProductLeft">
             {product.description}
           </span>
@@ -91,6 +92,7 @@ function ProductLeft({ product, isAndroid, isMobile }) {
           onHoverStart={() => startAnimation()}
           onHoverEnd={() => endAnimation()}
         >
+          <span className="nameProductLeft">{product.name}</span>
           <motion.span
             className="descriptionProductLeft"
             animate={btnAnimationHidden}
