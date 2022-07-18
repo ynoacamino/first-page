@@ -57,3 +57,51 @@
 .isMobileProductLeft {
   height: 650px;
 }
+
+@media (max-width: 1700px) {
+  .descriptionProductLeft {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1450px) {
+  .boxProducts {
+    display: flex;
+    flex-direction: column;
+  }
+  .ProductLeft {
+    flex-direction: row-reverse;
+    flex: 1;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    height: 400px;
+  }
+  .imgProductLeft {
+    min-width: 40%;
+    height: 280px;
+    object-fit: cover;
+    margin: 0;
+  }
+  .aniamtionBtnLeft {
+    max-width: 50%;
+  }
+}
+@media (max-width: 950px) {
+  .ProductLeft {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .imgProductLeft {
+    min-width: none;
+    width: 90%;
+    height: 300px;
+  }
+  .aniamtionBtnLeft {
+    max-width: none;
+    width: min(100%, 500px );
+    min-width: none;
+  }
+}
