@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
 import { faSlack } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 import BtnBurger from '../BtnBurger/BtnBurger';
 
 function Header() {
@@ -21,19 +22,19 @@ function Header() {
       <div className="rigth">
         <ul className={`Nav ${open && 'NavView'}`}>
           <li className="li">
-            <a className="link navLink underline" href="/">Inicio</a>
+            <Link className="link navLink underline" to="/">Inicio</Link>
           </li>
           <li className="li">
-            <a className="link navLink underline" href="/">Productos</a>
+            <Link className="link navLink underline" to="/products">Productos</Link>
           </li>
           <li className="li">
-            <a className="link navLink underline" href="/">Marcas</a>
+            <Link className="link navLink underline" to="/brand">Marcas</Link>
           </li>
           <li className="li">
-            <a className="link navLink underline" href="/">Tiendas</a>
+            <Link className="link navLink underline" to="/shops">Tiendas</Link>
           </li>
           <li className="li">
-            <a className="link navLink underline" href="/">Comprar</a>
+            <Link className="link navLink underline" to="/buy">Comprar</Link>
           </li>
         </ul>
         <button type="button" className="btnSearchNav pointer">
