@@ -93,6 +93,7 @@
   .ProductLeft {
     flex-direction: column;
     padding: 20px;
+    min-width: auto;
   }
   .imgProductLeft {
     min-width: none;
