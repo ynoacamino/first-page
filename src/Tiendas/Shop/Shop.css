@@ -1,0 +1,33 @@
+.Shop {
+  display: flex;
+  justify-content: space-between;
+  width: min(1200px, 85vw);
+  flex-wrap: wrap;
+}
+.boxImgShop {
+  width: 60%;
+  min-width: 620px;
+}
+.boxTextShop {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.nameShop {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.infoShop {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guionShop {
+  display: flex;
+  gap: 15px;
+  font-size: 1.1rem;
+}
