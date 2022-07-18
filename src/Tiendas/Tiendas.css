@@ -4,9 +4,14 @@
   align-items: center;
   background-color: white;
   flex-direction: column;
+  padding: 80px 0 ;
 }
 .titleTienda {
   font-family: 'Kanit', sans-serif;
   font-size: 4rem;
   color: rgb(44, 44, 44);
+}
+.namesShops {
+  font-size: 3rem;
+  margin-top: 100px;
 }
