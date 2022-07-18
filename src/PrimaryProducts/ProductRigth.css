@@ -15,7 +15,7 @@
 
 .imgProductRigthTop {
   max-height: 270px;
-  width: min(400px, 50%);
+  width: min(400px, 45%);
   object-fit: cover;
 }
 
@@ -45,4 +45,48 @@
 
 .MOBILEaniamtionBtnRigthTop {
   height: 170px;
+}
+
+@media (max-width: 1700px) {
+  .descriptionProductRigthTop {
+    font-size: 1rem;
+  }
+  .textBoxRigthTop {
+    height: 100%;
+    width: 50%;
+  }
+  .aniamtionBtnRigthTop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    justify-content: start;
+    overflow: hidden;
+    height: 200px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .ProductRigthTop {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 950px) {
+  .ProductRigthTop {
+    flex-direction: column-reverse;
+  }
+  .textBoxRigthTop {
+    width: min(100%, 500px );
+  }
+  .imgProductRigthTop {
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+  }
+  .MOBILEaniamtionBtnRigthTop {
+    height: auto;
+  }
 }
