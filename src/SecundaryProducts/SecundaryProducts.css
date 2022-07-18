@@ -63,3 +63,16 @@
   position: relative;
   flex-direction: row-reverse;
 }
+
+@media (max-width: 1450px) {
+  .SECboxProducts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .SECtitleProducts{
+    font-size: 2.5rem;
+  }
+}
