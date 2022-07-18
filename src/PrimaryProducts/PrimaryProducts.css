@@ -1,6 +1,6 @@
 .PrimaryProducts {
   background-color: white;
-  padding: 100px max(50px, 10%);
+  padding: 100px max(30px, 6%);
   padding-bottom: 50px;
   display: flex;
   gap: 40px;
@@ -61,4 +61,16 @@
   display: flex;
   gap: 40px;
   position: relative;
+}
+@media (max-width: 1450px) {
+  .boxProducts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .titleProducts{
+    font-size: 2.5rem;
+  }
 }
