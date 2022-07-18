@@ -38,7 +38,7 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
       },
     },
     show: {
-      y: -80,
+      y: -60,
       opacity: 1,
       transition: {
         type: 'spring',
