@@ -7,7 +7,6 @@ import Background from './Background/Background';
 import Subscribe from './Subscribe/Subscribe';
 import Footer from './Footer/Footer';
 import PrimaryProducts from './PrimaryProducts/PrimaryProducts';
-import SecundaryProducts from './SecundaryProducts/SecundaryProducts';
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
       <Background />
       <Slider />
       <PrimaryProducts />
-
+      <PrimaryProducts />
       <Subscribe />
       <Footer />
     </div>
