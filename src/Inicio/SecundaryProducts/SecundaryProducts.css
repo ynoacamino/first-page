@@ -1,0 +1,79 @@
+.SECPrimaryProducts {
+  background-color: white;
+  padding: 100px max(50px, 10%);
+  padding-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SEChoverProduct {
+  transition: transform 150ms;
+}
+
+.SEChoverProduct:hover {
+  transform: scale(1.1);
+}
+
+.SECboxProduct {
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: black;
+}
+.SECBoxRigth {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 3;
+}
+
+.SECtitleProducts{
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.SECviewMoreProducts {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(102, 102, 102); 
+}
+
+.SEClinkViewMore {
+  text-decoration: none;
+  color: rgb(100, 100, 100); 
+  transition: all 200ms;
+  font-size: 1.3rem;
+}
+
+
+.SEClinkViewMore:hover {
+  color: rgb(0, 0, 0);
+}
+
+.SECboxProducts {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1450px) {
+  .SECboxProducts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .SECtitleProducts{
+    font-size: 2.5rem;
+  }
+}
