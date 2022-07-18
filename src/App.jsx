@@ -16,7 +16,7 @@ function App() {
       <Background />
       <Slider />
       <PrimaryProducts />
-      <SecundaryProducts />
+
       <Subscribe />
       <Footer />
     </div>
