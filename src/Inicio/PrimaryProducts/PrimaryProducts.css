@@ -1,0 +1,77 @@
+.PrimaryProducts {
+  background-color: white;
+  padding: 100px max(30px, 6%);
+  padding-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hoverProduct {
+  transition: transform 150ms;
+}
+
+.hoverProduct:hover {
+  transform: scale(1.1);
+}
+
+.boxProduct {
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: black;
+}
+
+.BoxRigth {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 3;
+}
+
+.titleProducts{
+  font-weight: bold;
+  font-size: 3.5rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.viewMoreProducts {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(102, 102, 102); 
+}
+
+.linkViewMore {
+  text-decoration: none;
+  color: rgb(100, 100, 100); 
+  transition: all 200ms;
+  font-size: 1.3rem;
+}
+
+.linkViewMore:hover {
+  color: rgb(0, 0, 0);
+}
+
+.boxProducts {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+@media (max-width: 1450px) {
+  .boxProducts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .titleProducts{
+    font-size: 2.5rem;
+  }
+}
