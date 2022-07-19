@@ -1,6 +1,6 @@
 .Hr {
   width: min(720px, 60vw);
   height: 1px;
-  border-bottom: solid gray 1px;
+  border-bottom: solid rgb(187, 187, 187) 1px;
   margin: 30px;
 }
