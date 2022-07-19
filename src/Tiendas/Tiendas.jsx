@@ -74,7 +74,7 @@ function Tiendas() {
         CONOCE NUESTRAS TIENDAS
       </h1>
       <h2 className="namesShops">Arequipa</h2>
-      {Shops.Aqp.map((shop) => (
+      {Shops.Aqp.map((shop, index) => (
         <Shop
           name={shop.name}
           direccion={shop.direccion}
@@ -83,10 +83,11 @@ function Tiendas() {
           horario={shop.horario}
           key={shop.key}
           llave={shop.key}
+          vol={index !== Shops.Aqp.length - 1}
         />
       ))}
       <h2 className="namesShops">Lima</h2>
-      {Shops.Lima.map((shop) => (
+      {Shops.Lima.map((shop, index) => (
         <Shop
           name={shop.name}
           direccion={shop.direccion}
@@ -95,10 +96,11 @@ function Tiendas() {
           horario={shop.horario}
           key={shop.key}
           llave={shop.key}
+          vol={index !== Shops.Lima.length - 1}
         />
       ))}
       <h2 className="namesShops">Tacna</h2>
-      {Shops.Tacna.map((shop) => (
+      {Shops.Tacna.map((shop, index) => (
         <Shop
           name={shop.name}
           direccion={shop.direccion}
@@ -107,6 +109,7 @@ function Tiendas() {
           horario={shop.horario}
           key={shop.key}
           llave={shop.key}
+          vol={index !== Shops.Tacna.length - 1}
         />
       ))}
     </div>
