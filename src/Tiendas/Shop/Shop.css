@@ -3,6 +3,10 @@
   justify-content: space-between;
   width: min(1200px, 85vw);
   flex-wrap: wrap;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 30px;
+
 }
 .boxImgShop {
   width: 60%;
