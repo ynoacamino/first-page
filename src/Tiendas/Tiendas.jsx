@@ -70,9 +70,18 @@ const Shops = {
 function Tiendas() {
   return (
     <div className="Tiendas">
-      <h1 className="titleTienda">
-        CONOCE NUESTRAS TIENDAS
-      </h1>
+      <div className=" titleBoxTienda">
+        <h1 className="titleTienda">
+          <span className="parteTitle">CONOCE</span>
+          <span className="parteTitle">NUESTRAS</span>
+          <span className="parteTitle">TIENDAS</span>
+        </h1>
+        <img
+          src="https://www.clipartmax.com/png/full/197-1970940_mark-ogrady-boneco-vendedor-png.png"
+          alt=""
+          className="imgTitle"
+        />
+      </div>
       <h2 className="namesShops">Arequipa</h2>
       {Shops.Aqp.map((shop, index) => (
         <Shop
