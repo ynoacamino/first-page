@@ -11,6 +11,7 @@
 .boxImgShop {
   width: 60%;
   min-width: 620px;
+  border-radius: 30px;
 }
 .boxTextShop {
   width: 35%;
