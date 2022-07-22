@@ -8,10 +8,27 @@
 }
 .titleTienda {
   font-family: 'Kanit', sans-serif;
-  font-size: 4rem;
+  font-size: 9rem;
   color: rgb(44, 44, 44);
+  display: flex;
+  flex-direction: column;
 }
 .namesShops {
   font-size: 3rem;
   margin-top: 100px;
+}
+.titleBoxTienda {
+  display: flex;
+  justify-content: space-around;
+  height: 70vh;
+  align-items: center;
+  gap: 90px;
+  width: 80%;
+}
+.imgTitle {
+  height: 60vh;
+}
+
+.parteTitle {
+  margin-top: -40px;
 }
