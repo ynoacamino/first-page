@@ -1,0 +1,100 @@
+.Marcas {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBoxMarcas {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+  background-color: white;
+}
+
+.titleBoxText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 9rem;
+  font-family: 'Kanit', sans-serif;
+  z-index: 3;
+  width: 45%;
+}
+
+.imgMarcas {
+  width: 50%;
+  min-width: 600px;
+}
+
+.degradedMarcas {
+  background: linear-gradient(270deg, rgba(255, 123, 0, 0), #ffffff);
+  position: absolute;
+  height: 100%;
+  width: 9%;
+  left: 50%;
+}
+.boxMarcasImg {
+  display: flex;
+  justify-content: space-around;
+  gap: 70px;
+  flex-wrap: wrap;
+  padding: 150px 100px;
+}
+
+.imgMarca {
+  width: 20%;
+  min-width: 440px;
+  height: 320px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  border-radius: 30px;
+  background-color: white;
+}
+
+.footerMarcas {
+  width: 100%;
+  background-color: rgb(10, 10, 10) ;
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.boxTextFooter {
+  color: rgb(228, 228, 228);
+  font-size: 5rem;
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.spanTitleFooter {
+  margin-top: -40px;
+}
+.listMarcas {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.linkMarca {
+  color: rgb(170, 170, 170);
+  font-weight: bold;
+  font-size: 1.4rem;
+  transition: all 120ms;
+}
+.linkMarca:hover {
+  color:  white;
+  transform: translateX(10px);
+}
