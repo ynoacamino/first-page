@@ -50,7 +50,7 @@ const listMarcas = [
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon',
+    alt: 'redragon ',
   },
   {
     link: '/',
