@@ -2,11 +2,11 @@
   display: flex;
   justify-content: space-between;
   width: min(1200px, 85vw);
-  flex-wrap: wrap;
+
   background-color: #f4f4f4;
   padding: 20px;
   border-radius: 30px;
-
+  gap: 30px;
 }
 .boxImgShop {
   width: 60%;
@@ -36,3 +36,29 @@
   gap: 15px;
   font-size: 1.1rem;
 }
+@media (max-width: 1200px) {
+  .Shop {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .boxTextShop {
+    width: auto;
+  }
+  .boxImgShop {
+    width: 50%;
+    min-width: 440px;
+  }
+}
+@media (max-width: 980px) {
+  .Shop {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxImgShop {
+    width: 85%;
+    min-width: 350px;
+  }
+}
+
+
