@@ -1,0 +1,15 @@
+.imgMarca {
+  width: 20%;
+  min-width: 440px;
+  height: 320px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  border-radius: 30px;
+  background-color: white;
+  transition: transform 200ms;
+  
+}
+
+.imgMarca:hover {
+  transform: translateY(-10px);
+}
