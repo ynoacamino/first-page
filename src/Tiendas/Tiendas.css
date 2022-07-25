@@ -33,3 +33,41 @@
 .parteTitle {
   margin-top: -40px;
 }
+
+@media (max-width: 1350px) {
+
+  .parteTitle {
+    font-size: 8rem;
+  }
+  .imgTitle {
+    height: 50vh;
+  }
+}
+@media (max-width: 980px) {
+  .parteTitle {
+    font-size: 8rem;
+  }
+  .imgTitle {
+    height: 40vh;
+  }
+  .titleBoxTienda {
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 0;
+  }
+  .titleTienda {
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 690px) {
+  .parteTitle {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 510px) {
+  .parteTitle {
+    font-size: 4.5rem;
+  }
+}
