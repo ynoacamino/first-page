@@ -61,6 +61,7 @@ function ProductLeft({ product, isAndroid, isMobile }) {
     },
     hoverEnd: {
       scale: 1,
+
     },
   };
   return (
