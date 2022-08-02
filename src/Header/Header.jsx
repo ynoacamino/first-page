@@ -1,10 +1,11 @@
 import './Header.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faSlack } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import BtnBurger from '../BtnBurger/BtnBurger';
+import LateralBar from './LateralBar/LateralBar';
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -44,26 +45,7 @@ function Header() {
           <BtnBurger open={open} />
         </button>
       </div>
-      <ul className={`NavMobile ${open && 'NavMobileView'}`}>
-        <li className="li">
-          <a className="link navLink underline" href="/">Inicio</a>
-        </li>
-        <li className="li">
-          <a className="link navLink underline" href="/">Productos</a>
-        </li>
-        <li className="li">
-          <a className="link navLink underline" href="/">Marcas</a>
-        </li>
-        <li className="li">
-          <a className="link navLink underline" href="/">Tiendas</a>
-        </li>
-        <li className="li">
-          <a className="link navLink underline" href="/">Comprar</a>
-        </li>
-        <button type="button" className="btnExit pointer" onClick={clickOpen}>
-          <FontAwesomeIcon icon={faX} size="2x" />
-        </button>
-      </ul>
+      <LateralBar open={open} func={clickOpen} />
     </div>
   );
 }
