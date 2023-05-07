@@ -14,6 +14,7 @@ import Subscribe from './Subscribe/Subscribe';
 import Footer from './Footer/Footer';
 import Tiendas from './Tiendas/Tiendas';
 import Marcas from './Marcas/Marcas';
+import Products from './Products/Products';
 
 const store = configureStore({ reducer: {} });
 
@@ -23,10 +24,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Header />
       <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/products" element={<h1>Products</h1>} />
+        <Route path="/products" element={<Products />} />
         <Route path="/brand" element={<Marcas />} />
         <Route path="/shops" element={<Tiendas />} />
-        <Route path="/buy" element={<h1>Comprar</h1>} />
+        <Route path="/buy" element={<h1>Comprar xd</h1>} />
       </Routes>
       <Subscribe />
       <Footer />
