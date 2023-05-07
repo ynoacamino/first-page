@@ -1,0 +1,23 @@
+.Products {
+  background-color: white;
+  padding: 100px max(50px, 10%);
+  padding-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxGris {
+  background-color: #f4f4f4;
+  text-decoration: none;
+  color: black;
+  border-radius: 30px;
+}
+
+.BoxForProducts {
+  display:  flex;
+  flex-direction: column;
+  gap: 40px;
+}
