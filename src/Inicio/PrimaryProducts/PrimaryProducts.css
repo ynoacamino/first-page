@@ -1,6 +1,6 @@
 .PrimaryProducts {
   background-color: white;
-  padding: 100px max(30px, 6%);
+  padding: 100px max(50px, 10%);
   padding-bottom: 50px;
   display: flex;
   gap: 40px;
