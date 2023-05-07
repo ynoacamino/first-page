@@ -1,0 +1,18 @@
+.FRBox {
+  display: flex;
+  gap: 40px;
+
+}
+.FRLeft {
+  display: flex;
+  padding: 20px;
+  height: 280px;
+  flex: 2;
+}
+
+.FRRigth {
+  display: flex;
+  padding: 20px;
+  height: 280px;
+  flex: 1;
+}
