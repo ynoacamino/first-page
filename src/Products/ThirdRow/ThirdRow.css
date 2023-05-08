@@ -1,0 +1,30 @@
+.TRBox {
+  display: flex;
+  gap: 40px;
+}
+
+.TRColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 450px;
+}
+
+.imgTR {
+  max-width: 300px;
+  max-height: 270px;
+}
+
+.btnTR {
+  width: 180px;
+}
+
+.boxTextTR {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px
+}
