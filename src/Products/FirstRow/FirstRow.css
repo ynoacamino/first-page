@@ -1,18 +1,57 @@
 .FRBox {
   display: flex;
   gap: 40px;
-
+  width: 1500px;
 }
 .FRLeft {
   display: flex;
   padding: 20px;
-  height: 280px;
+  height: 390px;
   flex: 2;
+  justify-content: space-around ;
+  align-items: center;
 }
 
 .FRRigth {
   display: flex;
   padding: 20px;
-  height: 280px;
+  height: 390px;
   flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameFR {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.imgFRRigth{
+  width: 250px;
+  margin-bottom: 20px;
+  margin-top: -20px;
+}
+
+.imgFRLeft {
+  height: 430px;
+  margin-right: -100px;
+}
+
+.btnFR {
+  width: 180px;
+}
+
+.boxTextFRL {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.boxTextFRR {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
