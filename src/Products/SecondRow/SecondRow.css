@@ -1,0 +1,21 @@
+.SRPrimary {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boxTextSR {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  gap: 30px;
+}
+
+.imgSR {
+  flex: 1;
+}
+
+.btnSR {
+  width: 180px;
+}
