@@ -1,0 +1,103 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.SearchBar {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 30px;
+  gap: 20px;
+}
+
+.SBtitle {
+  font-size: 30px;
+}
+
+.SBboxBTN {
+  display: flex;
+  gap: 15px;
+}
+
+.SBbtn {
+  background-color: rgb(43, 43, 43);
+  color: white;
+  font-weight: bold;
+  border: 2px solid rgb(43, 43, 43);
+  border-radius: 40px;
+  padding: 10px 20px;
+  width: 130px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms;
+}
+
+.SBbtn:hover {
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+}
+
+.SBBtitle {
+  font-size: 22px;
+}
+
+.SBprecioBox{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.inputPrecio {
+  background-color: transparent;
+  color: rgb(43, 43, 43);
+  font-weight: bold;
+  border: 2px solid rgb(43, 43, 43);
+  border-radius: 40px;
+  padding: 7px 12px;
+  width: 100px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms;
+}
+
+.inputPrecio::placeholder {
+  font-weight: normal;
+}
+
+.SBBTitle {
+  font-size: 20px;
+}
+
+.SBmarcaBox{
+  margin-left: 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.SBsingleMarca{
+  display: flex;
+  gap: 8px;
+  color: #1f1f1f;
+}
+
+.SBcheckBox{
+  width: 20px;
+  background-color: black;
+  color: black;
+
+}
+.SBcheckBox:checked {
+  background-color: black;
+}
