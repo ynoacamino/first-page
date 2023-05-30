@@ -1,6 +1,7 @@
 .SRPrimary {
   display: flex;
   justify-content: space-between;
+
 }
 
 .boxTextSR {
@@ -10,13 +11,37 @@
   flex-direction: column;
   flex: 1;
   gap: 30px;
+
 }
 
 
 .imgSR {
-  flex: 1;
+  width: 50%;
 }
 
 .btnSR {
   width: 180px;
+}
+
+@media (max-width: 1300px) {
+  .SRPrimary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .imgSR {
+    width: 85%;
+  }
+}
+
+@media (max-width: 910px) {
+  .imgSR {
+    width: 90%;
+  }
+  .SRPrimary {
+    gap: 50px;
+    padding-top: 80px;
+  }
 }
