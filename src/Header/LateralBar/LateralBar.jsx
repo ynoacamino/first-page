@@ -10,16 +10,16 @@ function LateralBar({ open, func }) {
         <a className="link navLink underline" href="/">Inicio</a>
       </li>
       <li className="li">
-        <a className="link navLink underline" href="/">Productos</a>
+        <a className="link navLink underline" href="/products">Productos</a>
       </li>
       <li className="li">
-        <a className="link navLink underline" href="/">Marcas</a>
+        <a className="link navLink underline" href="/brand">Marcas</a>
       </li>
       <li className="li">
-        <a className="link navLink underline" href="/">Tiendas</a>
+        <a className="link navLink underline" href="/shops">Tiendas</a>
       </li>
       <li className="li">
-        <a className="link navLink underline" href="/">Comprar</a>
+        <a className="link navLink underline" href="/buy">Comprar</a>
       </li>
       <button type="button" className="btnExit pointer" onClick={func}>
         <FontAwesomeIcon icon={faX} size="2x" />
