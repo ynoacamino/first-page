@@ -23,8 +23,8 @@ function SearchBar() {
     <div className="SearchBar">
       <span className="SBtitle">Filtros</span>
       <div className="SBboxBTN">
-        <button className="SBbtn" type="button">Limpiar</button>
-        <button className="SBbtn" type="button">Filtrar</button>
+        <button className="SBbtn pointer" type="button">Limpiar</button>
+        <button className="SBbtn pointer" type="button">Filtrar</button>
       </div>
       <div className="SBboxPrecio">
         <span className="SBBtitle">Precio</span>
@@ -39,8 +39,13 @@ function SearchBar() {
         <div className="SBmarcaBox">
           {marcas.map((mrc) => (
             <div className="SBsingleMarca">
-              <span>{mrc.name}</span>
-              <input type="checkbox" />
+              <input
+                className="SBcheckBox"
+                type="checkbox"
+                name={mrc.name}
+                id={mrc.name}
+              />
+              <label htmlFor={mrc.name} className="SBmarcaSingle">{mrc.name.toUpperCase()}</label>
             </div>
           ))}
         </div>
