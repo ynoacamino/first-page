@@ -28,3 +28,33 @@
   justify-content: center;
   gap: 20px
 }
+
+@media (max-width: 1300px) {
+  .TRBox {
+    display: flex;
+    flex-direction: column;
+  }
+  .TRColumn {
+    display: flex;
+    padding: 20px;
+    height: 390px;
+    flex: 2;
+    justify-content: space-around ;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+@media (max-width: 820px) {
+  .TRBox {
+    flex-wrap: wrap;
+  }
+  .TRColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 450px;
+  }
+}
