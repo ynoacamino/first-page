@@ -50,32 +50,32 @@ const listMarcas = [
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon ',
+    alt: 'Redragon ',
   },
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon',
+    alt: 'Redragon',
   },
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon',
+    alt: 'Redragon',
   },
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon',
+    alt: 'Redragon',
   },
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon',
+    alt: 'Redragon',
   },
   {
     link: '/',
     src: 'https://www.tiendanova.com.ar/SITES/IMG/ignatech-10-2020/02-02-2021-07-02-06-logo-vector-01.png',
-    alt: 'redragon',
+    alt: 'Redragon',
   },
 ];
 
@@ -107,13 +107,11 @@ function Marcas() {
         </div>
         <div className="listMarcas">
           <ul>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
-            <li className="linkMarca"><a href="/" className="linkMarca">Redragon</a></li>
+            {listMarcas.map((marca) => (
+              <li className="linkMarca">
+                <a href="/" className="linkMarca">{marca.alt}</a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
