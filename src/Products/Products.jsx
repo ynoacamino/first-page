@@ -4,6 +4,7 @@ import FirstRow from './FirstRow/FirstRow';
 import SecondRow from './SecondRow/SecondRow';
 import ThirdRow from './ThirdRow/ThirdRow';
 import SearchBar from './SearchBar/SearchBar';
+import ProductsList from './ProductsList/ProductsList';
 
 function Products() {
   return (
@@ -18,6 +19,7 @@ function Products() {
       </div>
       <div className="bodyProducts">
         <SearchBar />
+        <ProductsList />
       </div>
     </div>
   );
