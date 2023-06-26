@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import { createStore } from 'redux';
-import { configureStore } from '@reduxjs/toolkit';
-import { Provider } from 'react-redux';
+import {
+  ApolloClient, InMemoryCache, gql, ApolloProvider,
+} from '@apollo/client';
 import Inicio from './Inicio/Inicio';
 import './index.css';
 // eslint-disable-next-line import/order
@@ -16,22 +16,18 @@ import Tiendas from './Tiendas/Tiendas';
 import Marcas from './Marcas/Marcas';
 import Products from './Products/Products';
 
-const store = configureStore({ reducer: {} });
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/brand" element={<Marcas />} />
-        <Route path="/shops" element={<Tiendas />} />
-        <Route path="/buy" element={<h1>Comprar xd</h1>} />
-      </Routes>
-      <Subscribe />
-      <Footer />
-    </BrowserRouter>
-  </Provider>
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path="/" element={<Inicio />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/brand" element={<Marcas />} />
+      <Route path="/shops" element={<Tiendas />} />
+      <Route path="/buy" element={<h1>Comprar xd</h1>} />
+    </Routes>
+    <Subscribe />
+    <Footer />
+  </BrowserRouter>
   ,
 );
