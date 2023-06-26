@@ -2,14 +2,19 @@ import './Background.css';
 import React from 'react';
 import Title from '../Title/Title';
 
+const img = {
+  src: 'https://media.discordapp.net/attachments/772232222220615710/982819357124087878/Web_Setup-GRAL_Blanco.jpg',
+  alt: 'setUp',
+};
+
 function Background() {
   return (
     <div className="Background">
       <div className="boxImgBg">
         <img
           className="boxImg"
-          src="https://media.discordapp.net/attachments/772232222220615710/982819357124087878/Web_Setup-GRAL_Blanco.jpg"
-          alt="setUp"
+          src={img.src}
+          alt={img.alt}
         />
         <div className="degraded" />
       </div>
