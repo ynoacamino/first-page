@@ -1,5 +1,5 @@
 import './Background.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 import Title from '../Title/Title';
