@@ -1,5 +1,7 @@
 import './Background.css';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useQuery, gql } from '@apollo/client';
+
 import Title from '../Title/Title';
 
 const img = {
@@ -7,15 +9,37 @@ const img = {
   alt: 'setUp',
 };
 
+const QUERY_IMAGE = gql`
+query findById($ID: ID!) {
+  findSingleImage(id: $ID) {
+    src
+    alt
+    link
+  }
+}
+`;
+
 function Background() {
+  const { loading, data } = useQuery(QUERY_IMAGE, {
+    variables: { ID: '649b166f083daa9c8af6e139' },
+  });
   return (
     <div className="Background">
       <div className="boxImgBg">
-        <img
-          className="boxImg"
-          src={img.src}
-          alt={img.alt}
-        />
+        { loading
+          ? (
+            <img
+              className="boxImg"
+              src={img.src}
+              alt={img.alt}
+            />
+          ) : (
+            <img
+              className="boxImg"
+              src={data.findSingleImage.src}
+              alt={data.findSingleImage.alt}
+            />
+          )}
         <div className="degraded" />
       </div>
       <div className="textBg">
