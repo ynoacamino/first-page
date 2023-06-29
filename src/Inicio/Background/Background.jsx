@@ -26,7 +26,7 @@ function Background() {
   return (
     <div className="Background">
       <div className="boxImgBg">
-        { loading
+        { loading || !data
           ? (
             <img
               className="boxImg"
