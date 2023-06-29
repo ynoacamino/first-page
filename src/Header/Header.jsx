@@ -2,13 +2,14 @@ import './Header.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { faSlack } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
 import BtnBurger from '../BtnBurger/BtnBurger';
 import LateralBar from './LateralBar/LateralBar';
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const [loading, data] = useQuery();
 
   const clickOpen = () => {
     setOpen(!open);
@@ -17,7 +18,7 @@ function Header() {
   return (
     <div className="Header">
       <a className="homeHeader link" href="/">
-        <FontAwesomeIcon icon={faSlack} size="3x" />
+        <img className="imgLogoHeader" src="https://cdn-icons-png.flaticon.com/512/8297/8297984.png" alt="logo" srcSet="" />
         <span className="titleHeader">Eshop</span>
       </a>
       <div className="rigth">
