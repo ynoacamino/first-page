@@ -86,6 +86,10 @@
   display: none;
 }
 
+.imgLogoHeader {
+  width: 70px;
+}
+
 @media (max-width: 1121px){
   .Header {
     justify-content: space-between;
