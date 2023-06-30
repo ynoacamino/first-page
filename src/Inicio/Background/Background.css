@@ -12,6 +12,9 @@
   width: min(1000px, 55vw);
   height: max(60vh, 500px);
   object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .degraded {
   width: 20%;
