@@ -6,10 +6,16 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import BtnBurger from '../BtnBurger/BtnBurger';
 import LateralBar from './LateralBar/LateralBar';
+import { QUERY_STATIC_IMAGE } from '../Operations/Query';
+import { isLoading } from '../util';
 
 function Header() {
   const [open, setOpen] = useState(false);
-  const [loading, data] = useQuery();
+  const { loading, data } = useQuery(QUERY_STATIC_IMAGE, {
+    variables: {
+      ID: '649e0f0de59b27af2756c89d',
+    },
+  });
 
   const clickOpen = () => {
     setOpen(!open);
@@ -18,7 +24,11 @@ function Header() {
   return (
     <div className="Header">
       <a className="homeHeader link" href="/">
-        <img className="imgLogoHeader" src="https://cdn-icons-png.flaticon.com/512/8297/8297984.png" alt="logo" srcSet="" />
+        {isLoading(loading || !data, <img
+          className="imgLogoHeader"
+          src={data ? data.findSingleImage.src : ''}
+          alt={data ? data.findSingleImage.alt : ''}
+        />, 'imgLogoHeader')}
         <span className="titleHeader">Eshop</span>
       </a>
       <div className="rigth">
