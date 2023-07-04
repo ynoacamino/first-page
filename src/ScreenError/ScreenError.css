@@ -1,0 +1,16 @@
+.ScreenError {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.msgError {
+  font-size: 3rem;
+  margin: 0px;
+  user-select: none;
+  pointer-events: none;
+}
