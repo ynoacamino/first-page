@@ -6,16 +6,21 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import BtnBurger from '../BtnBurger/BtnBurger';
 import LateralBar from './LateralBar/LateralBar';
-import { QUERY_STATIC_IMAGE } from '../Operations/Query';
-import { isLoading } from '../util';
+import { QUERY_MODULE } from '../Operations/Query';
+import { findID } from '../util';
 
 function Header() {
+  const idImageLogo = '649e0f0de59b27af2756c89d';
+  const idTextLogo = '649f8b8fe527c66bfbf3f850';
   const [open, setOpen] = useState(false);
-  const { loading, data } = useQuery(QUERY_STATIC_IMAGE, {
+  const { loading, data } = useQuery(QUERY_MODULE, {
     variables: {
-      ID: '649e0f0de59b27af2756c89d',
+      mod: 'Header',
     },
   });
+
+  const images = loading ? [] : data.findForModule.image;
+  const texts = loading ? [] : data.findForModule.text;
 
   const clickOpen = () => {
     setOpen(!open);
@@ -24,12 +29,14 @@ function Header() {
   return (
     <div className="Header">
       <a className="homeHeader link" href="/">
-        {isLoading(loading || !data, <img
+        <img
           className="imgLogoHeader"
-          src={data ? data.findSingleImage.src : ''}
-          alt={data ? data.findSingleImage.alt : ''}
-        />, 'imgLogoHeader')}
-        <span className="titleHeader">Eshop</span>
+          src={loading ? '' : images.find(findID(idImageLogo)).src}
+          alt={loading ? '' : images.find(findID(idImageLogo)).alt}
+        />
+        <span className="titleHeader">
+          {loading ? '' : texts.find(findID(idTextLogo)).name}
+        </span>
       </a>
       <div className="rigth">
         <ul className={`Nav ${open && 'NavView'}`}>
