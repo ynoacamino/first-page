@@ -1,29 +1,33 @@
 import './Background.css';
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import { isLoading } from '../../util';
 import Title from '../Title/Title';
-import { QUERY_STATIC_IMAGE } from '../../Operations/Query';
+import { findID } from '../../util';
 
-function Background() {
-  const { loading, data } = useQuery(QUERY_STATIC_IMAGE, {
-    variables: { ID: '649b166f083daa9c8af6e139' },
-  });
+function Background({ images, texts }) {
+  console.log({ images }, { texts });
+  const boxImg = images.find(findID('649b166f083daa9c8af6e139'));
+  const textBg = texts.find(findID('64a39756de4fc89914038f06'));
+
+  const especialText = [
+    textBg.description.substring(0, textBg.description.indexOf('click')),
+    textBg.description.substring(textBg.description.indexOf('click') + 5),
+  ];
+
   return (
     <div className="Background">
       <div className="boxImgBg">
-        {isLoading(loading || !data, <img
+        <img
           className="boxImg"
-          src={data ? data.findSingleImage.src : ''}
-          alt={data ? data.findSingleImage.alt : ''}
-        />, 'boxImg')}
+          src={boxImg.src}
+          alt={boxImg.alt}
+        />
         <div className="degraded" />
       </div>
       <div className="textBg">
-        La PC gamer de tu sueños a un
+        {especialText[0]}
         {' '}
         <a className="clickLink underline" href="/">click</a>
-        , consulta con nosotros.
+        {especialText[1]}
       </div>
       <Title />
     </div>
