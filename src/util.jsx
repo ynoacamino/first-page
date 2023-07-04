@@ -16,4 +16,6 @@ export const isLoading = (trueFalse, component, className, secondComponent = nul
   );
 };
 
+export const findID = (id) => (obj) => obj.id === id;
+
 export const hola = (x) => console.log(x);
