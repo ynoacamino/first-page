@@ -13,9 +13,10 @@ function Header() {
   const idImageLogo = '649e0f0de59b27af2756c89d';
   const idTextLogo = '649f8b8fe527c66bfbf3f850';
   const [open, setOpen] = useState(false);
+
   const { loading, data } = useQuery(QUERY_MODULE, {
     variables: {
-      mod: 'Header',
+      id: '64a4ced84c622ac3d7588672',
     },
   });
 
