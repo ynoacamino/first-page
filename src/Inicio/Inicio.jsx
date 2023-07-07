@@ -11,7 +11,7 @@ import { QUERY_MODULE } from '../Operations/Query';
 function Inicio() {
   const { loading, data } = useQuery(QUERY_MODULE, {
     variables: {
-      mod: 'Inicio',
+      id: '64a4dbacb464c4051e9b4a73',
     },
   });
   if (loading) {
