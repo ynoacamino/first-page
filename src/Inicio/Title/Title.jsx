@@ -2,12 +2,12 @@ import './Title.css';
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const word = 'ESHOP';
-
-function Title() {
+function Title({ title }) {
   return (
     <div className="Title">
-      {word
+      {title
+        .name
+        .toUpperCase()
         .split('')
         .map((lether, index) => (
           <motion.div
