@@ -7,6 +7,7 @@ function Background({ images, texts }) {
   console.log({ images }, { texts });
   const boxImg = images.find(findID('649b166f083daa9c8af6e139'));
   const textBg = texts.find(findID('64a39756de4fc89914038f06'));
+  const title = texts.find(findID('649f8b8fe527c66bfbf3f850'));
 
   const especialText = [
     textBg.description.substring(0, textBg.description.indexOf('click')),
@@ -29,7 +30,7 @@ function Background({ images, texts }) {
         <a className="clickLink underline" href="/">click</a>
         {especialText[1]}
       </div>
-      <Title />
+      <Title title={title} />
     </div>
   );
 }
