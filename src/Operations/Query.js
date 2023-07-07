@@ -12,8 +12,8 @@ query findById($ID: ID!) {
 `;
 
 export const QUERY_MODULE = gql`
-query($mod: String!) {
-  findForModule(mod: $mod) {
+query($id: String!) {
+  findForModule(id: $id) {
     image {
       alt
       id
