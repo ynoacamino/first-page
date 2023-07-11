@@ -17,14 +17,12 @@ query($id: String!) {
     image {
       alt
       id
-      mId
       src
     }
     text {
       name
       description
       id
-      mId
     }
   }
 }
