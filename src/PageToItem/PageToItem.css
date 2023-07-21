@@ -1,0 +1,94 @@
+.PagoToItem {
+  background-color: white;
+  padding: 100px max(50px, 10%);
+  padding-bottom: 50px;
+  display: flex;
+  gap: 40px;
+  position: relative;
+  justify-content: space-around;
+}
+
+.previewItem {
+  width: 50%;
+  padding: 10px;
+  max-width: 450px;
+}
+
+.infoItem {
+  width: 50%;
+  display:  flex;
+  flex-direction: column;
+}
+.nameItem {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.skuItem {
+  color: gray;
+  font-size: 1.1rem;
+}
+
+.precioItem {
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.box1Item {
+  display: flex;
+  gap: 50px;
+  margin: 40px 0;
+}
+.box2Item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.labelCantItem {
+  color: gray;
+  font-size: 1.1rem;
+}
+
+.inputCantItem {
+  border: 2px solid #ebebeb;
+  background-color: #ebebeb;
+  width: 40px;
+  font-size: 1.7rem;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.btnGetItem {
+  background-color: rgb(43, 43, 43);
+  color: white;
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid rgb(43, 43, 43);
+  transition: all 150ms;
+}
+
+.btnGetItem:hover {
+  background-color: transparent;
+  color: black;
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+
+.boxTextItem {
+  display:  flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titleItem {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.descriptionItem {
+  font-size: 1.1rem;
+
+}
