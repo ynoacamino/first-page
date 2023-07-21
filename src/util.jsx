@@ -18,4 +18,31 @@ export const isLoading = (trueFalse, component, className, secondComponent = nul
 
 export const findID = (id) => (obj) => obj.id === id;
 
-export const hola = (x) => console.log(x);
+export function ImgRatio({
+  aspectRatio, src, alt, h = '100%',
+}) {
+  const containerStyle = {
+    position: 'relative',
+    width: '100%',
+    paddingBottom: `${(1 / aspectRatio) * 100}%`,
+  };
+
+  if (h !== '100%') { containerStyle.height = h; containerStyle.paddingBottom = 0; }
+
+  const imageStyle = {
+    position: 'absolute',
+    width: '100%',
+    height: h,
+    objectFit: 'cover',
+  };
+
+  return (
+    <div style={containerStyle}>
+      <img
+        src={src}
+        alt={alt}
+        style={imageStyle}
+      />
+    </div>
+  );
+}
