@@ -1,9 +1,23 @@
-import './ProductsList.css';
 import React from 'react';
+import './ProductsList.css';
+import Item from './Item/Item';
 
 function ProductsList() {
   return (
-    <div />
+    <div className="ProductList">
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+      <Item />
+
+    </div>
   );
 }
 
