@@ -38,7 +38,7 @@ function SearchBar() {
         <span className="SBBTitle">Marca</span>
         <div className="SBmarcaBox">
           {marcas.map((mrc) => (
-            <div className="SBsingleMarca">
+            <div key={Math.random()} className="SBsingleMarca">
               <input
                 className="SBcheckBox"
                 type="checkbox"

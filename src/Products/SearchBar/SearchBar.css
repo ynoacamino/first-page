@@ -101,3 +101,14 @@ input[type=number]::-webkit-outer-spin-button {
 .SBcheckBox:checked {
   background-color: black;
 }
+
+@media (max-width: 450px) {
+  .SBprecioBox {
+    flex-direction: column;
+  }
+  .SBboxBTN {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
