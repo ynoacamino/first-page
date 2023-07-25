@@ -92,3 +92,28 @@
   font-size: 1.1rem;
 
 }
+
+@media (max-width: 900px) {
+  .PagoToItem {
+    flex-direction: column;
+  }
+  .previewItem {
+    width: auto;
+    padding: 10px;
+    max-width: 100vw;
+    margin-top: -100px;
+    margin-bottom: -17%;
+  }
+  .infoItem {
+    width: auto;
+    display:  flex;
+    flex-direction: column;
+
+  }
+}
+
+@media (max-width: 450px) {
+  .box1Item {
+    flex-wrap: wrap;
+  }
+}
