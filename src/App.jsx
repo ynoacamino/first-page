@@ -13,6 +13,8 @@ import Marcas from './Marcas/Marcas';
 import Products from './Products/Products';
 import ScreenError from './ScreenError/ScreenError';
 import Loading from './Loading/Loading';
+import PageToItem from './PageToItem/PageToItem';
+import Category from './Category/Category';
 
 function App() {
   const { loading, data, error } = useQuery(gql`
@@ -30,6 +32,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Inicio />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:category" element={<Category />} />
+        <Route path="/products/item/:productId" element={<PageToItem />} />
         <Route path="/brand" element={<Marcas />} />
         <Route path="/shops" element={<Tiendas />} />
         <Route path="/buy" element={<h1>Comprar xd</h1>} />
