@@ -1,7 +1,7 @@
 import './Header.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import BtnBurger from '../BtnBurger/BtnBurger';
@@ -13,6 +13,7 @@ function Header() {
   const idImageLogo = '649e0f0de59b27af2756c89d';
   const idTextLogo = '649f8b8fe527c66bfbf3f850';
   const [open, setOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(true);
 
   const { loading, data } = useQuery(QUERY_MODULE, {
     variables: {
@@ -57,9 +58,15 @@ function Header() {
             <Link className="link navLink underline" to="/buy">Comprar</Link>
           </li>
         </ul>
-        <button type="button" className="btnSearchNav pointer">
-          <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
-        </button>
+        <div className="boxbtnAndModal">
+          <button id="openModal" onClick={() => setOpenModal((o) => !o)} type="button" className="btnSearchNav pointer">
+            <FontAwesomeIcon icon={faUser} size="2x" beat={false} />
+          </button>
+          <div id="modal" className="boxModal" style={{ display: openModal ? 'none' : 'flex' }}>
+            <Link className="linkAuth underline" to="/login">Log in</Link>
+            <Link className="linkAuth underline" to="/singin">Sign in</Link>
+          </div>
+        </div>
         <button type="button" className="btnSearchNav" onClick={clickOpen}>
           <BtnBurger open={open} />
         </button>

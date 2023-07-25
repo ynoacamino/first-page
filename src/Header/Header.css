@@ -56,6 +56,7 @@
   width: 30px;
   height: 30px;
   color: #4e4e4e;
+  transition: all 100ms;
 }
 
 .btnSearchNav:hover {
@@ -88,6 +89,60 @@
 
 .imgLogoHeader {
   width: 70px;
+}
+
+.btnSearchNav:active {
+  translate: 0px -3px;
+}
+
+.boxbtnAndModal {
+  position: relative;
+}
+
+.boxModal {
+  width: 120px;
+  height: 100px;
+  background-color: #f4f4f4;
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: calc(50% - 70px);
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgb(0 0 0 / 40%);
+  padding: 10px;
+  display:  flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: black;
+}
+.boxModal::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-bottom: 16px solid rgba(116, 116, 116, 0.281);
+  position: absolute;
+  top: -15px;
+  z-index: 10;
+  right: calc(50% - 11px);
+}
+.boxModal::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 16px solid #f4f4f4;
+  position: absolute;
+  right: calc(50% - 8px);
+  top: -15px;
+  z-index: 290;
+}
+.linkAuth {
+  color: rgb(51, 51, 51);
 }
 
 @media (max-width: 1121px){
