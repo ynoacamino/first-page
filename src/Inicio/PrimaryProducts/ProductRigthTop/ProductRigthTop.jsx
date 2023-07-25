@@ -2,7 +2,9 @@ import '../ProductRigth.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-function ProductRigthTop({ isMobile, isAndroid, product }) {
+function ProductRigthTop({
+  isMobile, isAndroid, image, text,
+}) {
   const btnAnimationHidden = useAnimation();
   const btnAnimationShow = useAnimation();
   const imgAnimationHover = useAnimation();
@@ -71,14 +73,14 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
         onHoverEnd={() => endAnimation()}
       >
         <span className="nameProductRigthTop">
-          {product.name}
+          {text.name}
         </span>
         { (isMobile || isAndroid) && (
           <div className="aniamtionBtnRigthTop MOBILEaniamtionBtnRigthTop">
             <span
               className="descriptionProductRigthTop"
             >
-              {product.description}
+              {text.description}
             </span>
             <button
               className="pointer btnProduct"
@@ -95,7 +97,7 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
               animate={btnAnimationHidden}
               variants={variantes}
             >
-              {product.description}
+              {text.description}
             </motion.span>
 
             <motion.button
@@ -114,8 +116,8 @@ function ProductRigthTop({ isMobile, isAndroid, product }) {
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
         className="imgProductRigthTop"
-        src={product.src}
-        alt={product.name}
+        src={image.src}
+        alt={image.name}
         animate={imgAnimationHover}
         variants={variantes}
       />

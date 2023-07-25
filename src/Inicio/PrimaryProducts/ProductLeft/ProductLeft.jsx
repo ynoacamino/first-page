@@ -2,7 +2,9 @@ import './ProductLeft.css';
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-function ProductLeft({ product, isAndroid, isMobile }) {
+function ProductLeft({
+  image, text, isAndroid, isMobile,
+}) {
   const btnAnimationHidden = useAnimation();
   const btnAnimationShow = useAnimation();
   const imgAnimationHover = useAnimation();
@@ -70,17 +72,17 @@ function ProductLeft({ product, isAndroid, isMobile }) {
         onHoverStart={() => startAnimation()}
         onHoverEnd={() => endAnimation()}
         className="imgProductLeft "
-        src={product.src}
-        alt={product.name}
+        src={image.src}
+        alt={image.alt}
         animate={imgAnimationHover}
         variants={variantes}
       />
 
       { (isMobile || isAndroid) && (
         <div className="aniamtionBtnLeft">
-          <span className="nameProductLeft">{product.name}</span>
+          <span className="nameProductLeft">{text.name}</span>
           <span className="descriptionProductLeft">
-            {product.description}
+            {text.description}
           </span>
           <button className="pointer btnProduct" type="button">
             Comprar
@@ -93,13 +95,13 @@ function ProductLeft({ product, isAndroid, isMobile }) {
           onHoverStart={() => startAnimation()}
           onHoverEnd={() => endAnimation()}
         >
-          <span className="nameProductLeft">{product.name}</span>
+          <span className="nameProductLeft">{text.name}</span>
           <motion.span
             className="descriptionProductLeft"
             animate={btnAnimationHidden}
             variants={variantes}
           >
-            {product.description}
+            {text.description}
           </motion.span>
           <motion.button
             type="button"
