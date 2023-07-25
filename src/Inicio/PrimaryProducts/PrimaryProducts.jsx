@@ -6,50 +6,38 @@ import {
 import ProductLeft from './ProductLeft/ProductLeft';
 import ProductRigthTop from './ProductRigthTop/ProductRigthTop';
 import ProductRigthBottom from './ProductRigthBottom/ProductRigthBottom';
+import { findID } from '../../util';
 
-const products = {
-  left: {
-    name: 'Redragon Fizz Pro',
-    src: 'https://cdn.shopify.com/s/files/1/2695/9506/products/smallkeyboard_1024x1024@2x.png?v=1629454231',
-    description: 'El K616-RGB FIZZ PRO te asegurará una respuesta ultrarrápida de 1 ms en modo inalámbrico de 2,4 GHz, 0 latencia y 0 input lag.',
-  },
-  rigth_top: {
-    name: 'Redragon Monitor Ruby',
-    src: 'https://cdn.discordapp.com/attachments/772232222220615710/983895809722560592/modal-ruby-desktop_2.png',
-    description: 'El Ruby está equipado con un panel VA que proporciona una pérdida mínima de luz y un contraste superior con colores oscuros más fuertes y definidos.',
-  },
-  rigth_bottom: {
-    name: 'Redragon Zeus 2',
-    src: 'https://dojiw2m9tvv09.cloudfront.net/23332/product/X_h510-35542.png?80',
-    description: 'Los Zeus son auriculares premium diseñados para disfrutar al 100% del magnífico mundo sonoro de los mejores juegos.',
-  },
-  bottom: {
-    name: 'Redragon Esmerald',
-    src: 'https://redragon.es/content/uploads/2021/06/EMERALD-1.png',
-    description: 'El Emerald es un monitor gamer de 28" con tecnología IPS, lo que proporciona un ángulo de visión muy amplio, de 178º, y una mejoría sustancial en el color. ',
-  },
-};
+function PrimaryProducts({ images, texts }) {
+  const imgL = images.find(findID('64b2ed9fabfda49049469e36'));
+  const imgRT = images.find(findID('64b2edb8abfda49049469e38'));
+  const imgRB = images.find(findID('64b2edcbabfda49049469e3a'));
 
-function PrimaryProducts() {
+  const txtL = texts.find(findID('64b2ed41abfda49049469e34'));
+  const txtRT = texts.find(findID('64b2edeeabfda49049469e3c'));
+  const txtRB = texts.find(findID('64b2ee14abfda49049469e3e'));
   return (
     <div className="PrimaryProducts">
       <span className="titleProducts">Productos Top</span>
       <div className="boxProducts">
         <ProductLeft
-          product={products.left}
+          image={imgL}
+          text={txtL}
           isAndroid={isAndroid}
           isMobile={isMobile}
         />
         <div className="BoxRigth">
           <ProductRigthTop
+            image={imgRT}
+            text={txtRT}
             isAndroid={isAndroid}
             isMobile={isMobile}
-            product={products.rigth_top}
           />
           <ProductRigthBottom
+            image={imgRB}
+            text={txtRB}
             isAndroid={isAndroid}
             isMobile={isMobile}
-            product={products.rigth_bottom}
           />
         </div>
       </div>
