@@ -1,0 +1,31 @@
+.Category {
+  background-color: white;
+  padding: 100px max(50px, 18vw);
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  justify-content: space-around;
+}
+.titleCategory{
+  font-weight: bold;
+  font-size: 3.7rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 1370px) {
+  .Category {
+    padding: 100px 10vw;
+  }
+}
+
+@media (max-width: 730px) {
+  .Category {
+    padding: 100px 6vw;
+  }
+}
