@@ -1,10 +1,8 @@
 import './Products.css';
 import { React } from 'react';
-import FirstRow from './FirstRow/FirstRow';
-import SecondRow from './SecondRow/SecondRow';
-import ThirdRow from './ThirdRow/ThirdRow';
 import SearchBar from './SearchBar/SearchBar';
 import ProductsList from './ProductsList/ProductsList';
+import ViewCategory from './viewCategory/viewCategory';
 
 function Products() {
   return (
@@ -13,9 +11,7 @@ function Products() {
         Categorias
       </span>
       <div className="BoxForProducts">
-        <FirstRow />
-        <SecondRow />
-        <ThirdRow />
+        <ViewCategory />
       </div>
       <div className="bodyProducts">
         <SearchBar />
