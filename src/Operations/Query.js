@@ -28,4 +28,52 @@ query($id: String!) {
 }
 `;
 
+export const QUERY_ALL_ITEMS = gql`
+query {
+  findAllItems {
+    name
+    src
+    sku
+    id
+    cost
+    brand
+    description
+    stock
+    tags
+  }
+}
+`;
+
+export const QUERY_ONE_ITEM = gql`
+query($id: String!) {
+  findItemById(id: $id) {
+    name
+    src
+    sku
+    id
+    cost
+    brand
+    description
+    stock
+    tags
+  }
+}
+`;
+
+export const QUERY_CATEGORY = gql`
+query ($category: String!) {
+  findCategory(category: $category) {
+    name
+    src
+    sku
+    id
+    cost
+    brand
+    description
+    stock
+    tags
+  }
+}
+`;
+
 export const hola = () => console.log('hola');
