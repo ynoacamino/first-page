@@ -7,9 +7,16 @@
   gap: 15px;
   flex: 1;
   align-items: center;
-  min-width: 250px;
-  max-width: 400px;
+  max-width: 240px;
   padding-bottom: 35px;
+}
+
+.itemLink {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  align-items: center;
+  justify-content: center;
 }
 
 .pITitle {
@@ -35,6 +42,7 @@
 .textNombreItem {
   color: black;
   font-size: 1.1rem;
+  width: 80%;
 }
 
 .textPrecioItem {
@@ -60,4 +68,8 @@
   color: black;
   background-color: rgb(43, 43, 43);
   color: white;
+}
+
+.productItem:hover {
+  box-shadow: 0 0 7px rgb(0 0 0 / 40%);
 }
