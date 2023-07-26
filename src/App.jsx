@@ -15,6 +15,8 @@ import ScreenError from './ScreenError/ScreenError';
 import Loading from './Loading/Loading';
 import PageToItem from './PageToItem/PageToItem';
 import Category from './Category/Category';
+import LoginForm from './AuthForm/LoginForm';
+import RegisterForm from './AuthForm/RegisterForm';
 
 function App() {
   const { loading, data, error } = useQuery(gql`
@@ -37,6 +39,8 @@ function App() {
         <Route path="/brand" element={<Marcas />} />
         <Route path="/shops" element={<Tiendas />} />
         <Route path="/buy" element={<h1>Comprar xd</h1>} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/singin" element={<RegisterForm />} />
       </Routes>
       <Subscribe />
       <Footer />
