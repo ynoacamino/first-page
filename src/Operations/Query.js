@@ -76,4 +76,14 @@ query ($category: String!) {
 }
 `;
 
-export const hola = () => console.log('hola');
+export const QUERY_USERDATA = gql`
+query {
+  findUserData {
+    name
+    username
+    phone
+    cart
+    lastname
+  }
+}
+`;
