@@ -1,15 +1,18 @@
 import './SingleMarca.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ImgRatio } from '../../util';
 
-function SingleMarca({ link, src, alt }) {
+function SingleMarca({ src, name }) {
   return (
-    <a href={link}>
-      <img
+    <Link to={`/products/${name}`} className="boxBrand">
+      <ImgRatio
+        aspectRatio={15 / 8}
         src={src}
-        alt={alt}
+        alt={name}
         className="imgMarca"
       />
-    </a>
+    </Link>
   );
 }
 
