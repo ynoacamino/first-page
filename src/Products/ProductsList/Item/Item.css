@@ -73,3 +73,26 @@
 .productItem:hover {
   box-shadow: 0 0 7px rgb(0 0 0 / 40%);
 }
+
+.boxAddItemHidden {
+  position: fixed;
+  top: -30px;
+  transition: top 0.3s;
+}
+
+.boxAddItem {
+  width: 340px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 100px;
+  right: calc(50% - 190px);
+  transition: top 0.3s;
+  z-index: 10000;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
