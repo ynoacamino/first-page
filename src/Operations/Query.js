@@ -80,10 +80,41 @@ export const QUERY_USERDATA = gql`
 query {
   findUserData {
     name
-    username
-    phone
-    cart
     lastname
+    phone
+    username
+    id
+    cart {
+      cost
+      name
+      src
+      id
+    }
+  }
+}
+`;
+
+export const QUERY_BRANDS = gql`
+query{
+  findBrands {
+    id
+    name
+    src
+  }
+}
+`;
+
+export const QUERY_SHOPS = gql`
+{
+  findShops {
+    name
+    city
+    src
+    direcction
+    email
+    phone
+    workingHours
+    id
   }
 }
 `;

@@ -15,3 +15,29 @@ mutation($username: String!, $password: String!, $name: String!, $lastname: Stri
   }
 }
 `;
+
+export const ADD_ITEM = gql`
+mutation($itemId: String!){
+  addItemToCart(itemId: $itemId) {
+    id
+    name
+    cart {
+      name
+      cost
+      id
+      description
+    }
+  }
+}
+`;
+
+export const REMOVE_ITEM = gql`
+mutation($id: String!) {
+  removeItemCart(id: $id) {
+    cart {
+      name
+      id
+    }
+  }
+}
+`;
