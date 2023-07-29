@@ -1,3 +1,42 @@
+.marcasBackground {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.marcaBoxImgBg {
+  position: relative;
+}
+
+.marcaBoxImg {
+  width: min(1000px, 55vw);
+  height: max(60vh, 500px);
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marcaDegraded {
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 125, 0, 0), #f5f5f5);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.marcaTextBg {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  padding: 80px;
+  font-size: 1.8rem;
+  color: rgb(31, 31, 31);
+  font-family: 'Kanit', sans-serif;
+  font-size: 6.5rem;
+}
+
+
 .Marcas {
   display: flex;
   flex-direction: column;
@@ -24,7 +63,6 @@
 
 .imgMarcas {
   width: 50%;
-  min-width: 600px;
 }
 
 .degradedMarcas {
@@ -41,16 +79,15 @@
   justify-content: space-around;
   gap: 70px;
   flex-wrap: wrap;
-  padding: 150px 100px;
+  padding: 150px max(30px, 8vw);
 }
 
 .footerMarcas {
-  width: 100%;
   background-color: rgb(10, 10, 10) ;
   display: flex;
   justify-content: space-around ;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 30px;
 }
 
 .boxTextFooter {
@@ -85,8 +122,54 @@ a {
   font-weight: bold;
   font-size: 1.4rem;
   transition: all 120ms;
+  width: 100%;
+  display: flex;
 }
 .linkMarca:hover {
   color:  white;
   transform: translateX(10px);
+}
+@media (max-width: 1200px){
+  .marcaTextBg {
+    padding: 70px;
+  }
+}
+
+@media (max-width: 1000px){
+  .marcasBackground {
+    flex-direction: column-reverse;
+    padding: 40px 0 0 0;
+  }
+
+  .marcaBoxImg {
+    width: 100%;
+  }
+  .marcaDegraded {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg,rgba(255, 125, 0, 0), #f5f5f5);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .boxTextFooter {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 600px){
+  .marcaTextBg {
+    font-size: 4rem; 
+    padding: 70px 10px;
+  }
+  .boxTextFooter {
+    font-size: 3rem;
+    gap: 15px;
+    text-align: center;
+  }
+  .footerMarcas {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
