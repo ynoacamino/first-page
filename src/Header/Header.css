@@ -144,6 +144,11 @@
 .linkAuth {
   color: rgb(51, 51, 51);
 }
+.boxModalLoged {
+  width: 200px;
+  height: 240px;
+  right: calc(50% - 110px);
+}
 
 @media (max-width: 1121px){
   .Header {

@@ -8,8 +8,10 @@ import BtnBurger from '../BtnBurger/BtnBurger';
 import LateralBar from './LateralBar/LateralBar';
 import { QUERY_MODULE } from '../Operations/Query';
 import { findID } from '../util';
+import { useShop } from '../context/ShopContext';
 
 function Header() {
+  const { isLoged, logout, user } = useShop();
   const idImageLogo = '649e0f0de59b27af2756c89d';
   const idTextLogo = '649f8b8fe527c66bfbf3f850';
   const [open, setOpen] = useState(false);
@@ -62,9 +64,41 @@ function Header() {
           <button id="openModal" onClick={() => setOpenModal((o) => !o)} type="button" className="btnSearchNav pointer">
             <FontAwesomeIcon icon={faUser} size="2x" beat={false} />
           </button>
-          <div id="modal" className="boxModal" style={{ display: openModal ? 'none' : 'flex' }}>
-            <Link className="linkAuth underline" to="/login">Log in</Link>
-            <Link className="linkAuth underline" to="/singin">Sign in</Link>
+          <div id="modal" className={`boxModal ${isLoged() && 'boxModalLoged'}`} style={{ display: openModal ? 'none' : 'flex' }}>
+            {
+              isLoged()
+                ? (
+                  <>
+                    <span>
+                      Username:
+                      {' '}
+                      {user?.username}
+                    </span>
+                    <span>
+                      Name:
+                      {' '}
+                      {user?.name}
+                    </span>
+                    <span>
+                      Lastname:
+                      {' '}
+                      {user?.lastname}
+                    </span>
+                    <span>
+                      Phone:
+                      {' '}
+                      {user?.phone}
+                    </span>
+                    <button type="button" className="underline clearBtn" style={{ fontSize: '1.2rem' }} onClick={logout}>LogOut</button>
+                  </>
+                )
+                : (
+                  <>
+                    <Link className="linkAuth underline" to="/login">Log in</Link>
+                    <Link className="linkAuth underline" to="/singin">Sign in</Link>
+                  </>
+                )
+            }
           </div>
         </div>
         <button type="button" className="btnSearchNav" onClick={clickOpen}>
