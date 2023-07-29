@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 
 export const isLoading = (trueFalse, component, className, secondComponent = null) => {
@@ -45,4 +46,14 @@ export function ImgRatio({
       />
     </div>
   );
+}
+
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }
