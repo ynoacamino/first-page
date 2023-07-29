@@ -7,11 +7,8 @@ import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { REGISTER_USER } from '../Operations/Mutation';
-
-// TODO remove, this demo shouldn't need to reset the theme.
+import { Link, useNavigate } from 'react-router-dom';
+import { useShop } from '../context/ShopContext';
 
 const defaultTheme = createTheme({
   palette: {
@@ -21,30 +18,25 @@ const defaultTheme = createTheme({
   },
 });
 
-function RegisterForm({ setToken }) {
-  const [loginAdmin, result] = useMutation(REGISTER_USER);
+function RegisterForm() {
+  const { isLoged, register } = useShop();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLoged()) navigate('/');
+  }, [isLoged()]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    loginAdmin({
-      variables: {
-        username: data.get('username'),
-        password: data.get('password'),
-        name: data.get('name'),
-        phone: data.get('phone'),
-        lastname: data.get('lastname'),
-      },
-    });
+    register(
+      data.get('username'),
+      data.get('name'),
+      data.get('lastname'),
+      data.get('phone'),
+      data.get('password'),
+    );
   };
-
-  useEffect(() => {
-    if (result.data) {
-      const { value: token } = result.data.loginAdmin;
-      setToken(token);
-      localStorage.setItem('admin-login-token', token);
-    }
-  }, [result.data]);
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -129,6 +121,11 @@ function RegisterForm({ setToken }) {
             <Link to="/login">
               <Typography sx={{ display: 'flex', justifyContent: 'center', color: 'black' }}>
                 Ya tienes cuenta?
+              </Typography>
+            </Link>
+            <Link to="/">
+              <Typography sx={{ display: 'flex', justifyContent: 'center', color: 'black' }}>
+                Volver al inicio
               </Typography>
             </Link>
           </Box>

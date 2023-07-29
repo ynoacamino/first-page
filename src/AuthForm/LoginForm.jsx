@@ -1,5 +1,4 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -8,11 +7,8 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useMutation } from '@apollo/client';
-import { Link } from 'react-router-dom';
-import { LOGIN_USER } from '../Operations/Mutation';
-
-// TODO remove, this demo shouldn't need to reset the theme.
+import { Link, useNavigate } from 'react-router-dom';
+import { useShop } from '../context/ShopContext';
 
 const defaultTheme = createTheme({
   palette: {
@@ -21,27 +17,23 @@ const defaultTheme = createTheme({
     },
   },
 });
-function LoginForm({ setToken }) {
-  const [loginAdmin, result] = useMutation(LOGIN_USER);
+
+function LoginForm() {
+  const { isLoged, login } = useShop();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLoged()) navigate('/');
+  }, [isLoged()]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    loginAdmin({
-      variables: {
-        username: data.get('username'),
-        password: data.get('password'),
-      },
-    });
+    login(
+      data.get('username'),
+      data.get('password'),
+    );
   };
-
-  useEffect(() => {
-    if (result.data) {
-      const { value: token } = result.data.loginAdmin;
-      setToken(token);
-      localStorage.setItem('admin-login-token', token);
-    }
-  }, [result.data]);
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -87,9 +79,14 @@ function LoginForm({ setToken }) {
             <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
               Log in
             </Button>
-            <Link to="/singin" className="underline">
+            <Link to="/singin">
               <Typography sx={{ display: 'flex', justifyContent: 'center', color: 'black' }}>
                 Aun no tienes cuenta?
+              </Typography>
+            </Link>
+            <Link to="/">
+              <Typography sx={{ display: 'flex', justifyContent: 'center', color: 'black' }}>
+                Volver al inicio
               </Typography>
             </Link>
           </Box>
