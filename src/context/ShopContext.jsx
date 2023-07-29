@@ -1,10 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable react/jsx-no-constructed-context-values */
-import { useApolloClient } from '@apollo/client';
+import { useApolloClient, useQuery } from '@apollo/client';
 import React, {
   useContext, createContext, useState, useEffect,
 } from 'react';
 import { QUERY_USERDATA } from '../Operations/Query';
+import { LOGIN_USER, REGISTER_USER } from '../Operations/Mutation';
 
 const shopContext = createContext();
 
@@ -16,33 +18,68 @@ export const useShop = () => {
 
 export function ShopProvider({ children }) {
   const [user, setUser] = useState(null);
+  const { data, refetch, loading } = useQuery(QUERY_USERDATA);
+  const [token, setToken] = useState(null);
   const client = useApolloClient();
+  const [cart, setCart] = useState([]);
 
-  const login = async () => {
+  useEffect(() => {
+    if (data?.findUserData) {
+      setUser(data.findUserData);
+      setCart(data.findUserData.cart);
+    }
+  }, [data]);
+
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem('user-login-token', token);
+    }
+  }, [token]);
+
+  const login = async (username, password) => {
     try {
-      const { data } = await client.query({
-        query: QUERY_USERDATA,
+      const tk = await client.mutate({
+        mutation: LOGIN_USER,
+        variables: {
+          username,
+          password,
+        },
       });
-      setUser({
-        username: data.findUserData.username,
-        name: data.findUserData.name,
-        phone: data.findUserData.phone,
-        lastname: data.findUserData.lastname,
-      });
+      if (tk) {
+        setToken(tk.data.loginUser.value);
+      }
+      location.reload();
     } catch (err) {
       throw new Error('Wrong credentials');
     }
   };
 
-  useEffect(() => {
-    if (localStorage.getItem('userData')) {
-      setUser(JSON.parse(localStorage.getItem('userData')));
+  const register = async (username, password, phone, name, lastname) => {
+    try {
+      const tk = await client.mutate({
+        mutation: REGISTER_USER,
+        variables: {
+          username,
+          name,
+          lastname,
+          phone,
+          password,
+        },
+      });
+      if (tk) {
+        setToken(tk.data.createUser.value);
+      }
+      location.reload();
+    } catch (err) {
+      throw new Error(`${err.message} Creadentials wrong`);
     }
-  }, []);
+  };
+
+  const isLoged = () => !!user;
 
   useEffect(() => {
-    localStorage.setItem('userData', JSON.stringify(user));
-  }, [user]);
+    if (localStorage.getItem('user-login-token')) refetch();
+  }, []);
 
   const logout = () => {
     setUser(null);
@@ -56,7 +93,12 @@ export function ShopProvider({ children }) {
       value={{
         user,
         login,
+        register,
         logout,
+        isLoged,
+        reload: refetch,
+        loading,
+        cart,
       }}
     >
       {children}
