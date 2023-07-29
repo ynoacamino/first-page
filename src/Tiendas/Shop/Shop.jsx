@@ -4,18 +4,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHouse, faEnvelope, faClock } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import Hr from '../Hr/Hr';
+import { ImgRatio } from '../../util';
 
 function Shop({
-  name, direccion, phone, email, horario, vol,
+  name, direccion, phone, email, horario, src,
 }) {
   return (
     <>
       <div className="Shop">
-        <img
-          src="https://xiaomiperu.com/media/direccion_tienda_mi_store_plaza_norte_xiaomi.png"
-          alt="shop"
+        <div
           className="boxImgShop"
-        />
+          style={{ borderRadius: '15px', overflow: 'hidden' }}
+        >
+          <ImgRatio
+            src={src}
+            alt={name}
+            aspectRatio={20 / 11}
+          />
+        </div>
+
         <div className="boxTextShop">
           <span className="nameShop">{name}</span>
           <div className="infoShop">
@@ -38,7 +45,7 @@ function Shop({
           </div>
         </div>
       </div>
-      {vol && <Hr />}
+      <Hr />
     </>
   );
 }
