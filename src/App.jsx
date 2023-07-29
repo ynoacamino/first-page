@@ -17,6 +17,8 @@ import PageToItem from './PageToItem/PageToItem';
 import Category from './Category/Category';
 import LoginForm from './AuthForm/LoginForm';
 import RegisterForm from './AuthForm/RegisterForm';
+import Buy from './Buy/Buy';
+import { ScrollToTop } from './util';
 
 function App() {
   const { loading, data, error } = useQuery(gql`
@@ -30,6 +32,7 @@ function App() {
   if (loading) return <Loading />;
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Inicio />} />
@@ -38,7 +41,7 @@ function App() {
         <Route path="/products/item/:productId" element={<PageToItem />} />
         <Route path="/brand" element={<Marcas />} />
         <Route path="/shops" element={<Tiendas />} />
-        <Route path="/buy" element={<h1>Comprar xd</h1>} />
+        <Route path="/buy" element={<Buy />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/singin" element={<RegisterForm />} />
       </Routes>
