@@ -31,7 +31,7 @@ function PageToItem() {
         <span className="skuItem">
           SKU:
           {' '}
-          {data.findItemById.sku}
+          {data?.findItemById.sku || 123123123}
         </span>
         <span className="precioItem">
           S/

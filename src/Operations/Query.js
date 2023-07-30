@@ -33,7 +33,6 @@ query {
   findAllItems {
     name
     src
-    sku
     id
     cost
     brand
@@ -49,7 +48,6 @@ query($id: String!) {
   findItemById(id: $id) {
     name
     src
-    sku
     id
     cost
     brand
@@ -65,7 +63,6 @@ query ($category: String!) {
   findCategory(category: $category) {
     name
     src
-    sku
     id
     cost
     brand
